@@ -1,0 +1,22 @@
+---
+title: "SciViews"
+author: "Philippe Grosjean"
+date: "17 November 2015"
+output: 
+  html_document: 
+    fig_caption: yes
+    keep_md: yes
+---
+
+This is a **test**...
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
