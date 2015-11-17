@@ -21,7 +21,7 @@ Now we write some R code chunks in this post. For example,
 options(digits = 3)
 cat("hello world!")
 set.seed(123)
-(x = rnorm(40) + 10)
+(x = rnorm(40) + 20)
 # generate a table
 knitr::kable(head(mtcars))
 (function() {

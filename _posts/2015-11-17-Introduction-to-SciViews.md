@@ -33,16 +33,16 @@ cat("hello world!")
 
 {% highlight r %}
 set.seed(123)
-(x = rnorm(40) + 10)
+(x = rnorm(40) + 20)
 {% endhighlight %}
 
 
 
 {% highlight text %}
-##  [1]  9.44  9.77 11.56 10.07 10.13 11.72 10.46  8.73  9.31  9.55 11.22
-## [12] 10.36 10.40 10.11  9.44 11.79 10.50  8.03 10.70  9.53  8.93  9.78
-## [23]  8.97  9.27  9.37  8.31 10.84 10.15  8.86 11.25 10.43  9.70 10.90
-## [34] 10.88 10.82 10.69 10.55  9.94  9.69  9.62
+##  [1] 19.4 19.8 21.6 20.1 20.1 21.7 20.5 18.7 19.3 19.6 21.2 20.4 20.4
+## [14] 20.1 19.4 21.8 20.5 18.0 20.7 19.5 18.9 19.8 19.0 19.3 19.4 18.3
+## [27] 20.8 20.2 18.9 21.3 20.4 19.7 20.9 20.9 20.8 20.7 20.6 19.9 19.7
+## [40] 19.6
 {% endhighlight %}
 
 
@@ -90,7 +90,7 @@ names(formals(servr::jekyll))  # arguments of the jekyll() function
 ## [7] "..."
 {% endhighlight %}
 
-Just to test inline R expressions[^2] in **knitr**, we know the first element in `x` (created in the code chunk above) is 9.44. You can certainly draw some graphs as well:
+Just to test inline R expressions[^2] in **knitr**, we know the first element in `x` (created in the code chunk above) is 19.44. You can certainly draw some graphs as well:
 
 [^2]: The syntax in R Markdown for inline expressions is `` `r code` ``, where `code` is the R expression that you want to evaluate, e.g. `x[1]`.
 

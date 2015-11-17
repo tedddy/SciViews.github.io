@@ -11,3 +11,6 @@ github_username:  phgrosjean
 
 # Build settings
 markdown: kramdown
+
+# Syntax highlighting
+highlighter: pygments
