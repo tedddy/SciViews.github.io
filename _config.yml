@@ -5,7 +5,8 @@ locale: en_US
 description: SciViews is a layer on top of the software R to enhance its language and environment.
 logo: site-logo.png
 search: true
-url: http://www.sciviews.org
+#url: http://localhost:4000
+#http://www.sciviews.org
 
 # Jekyll configuration
 
