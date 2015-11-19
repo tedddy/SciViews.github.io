@@ -1,16 +1,56 @@
-# Site settings
+# Site wide configuration
+
 title: SciViews
-email: phgrosjean@sciviews.org
-description: > # this means to ignore newlines until "baseurl:"
-  SciViews is a layer on top of the software R (http://www.r-project.org)
-  to enhance its language and environment.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://www.sciviews.org" # the base hostname & protocol for your site
-twitter_username: PhilGrosjean
-github_username:  phgrosjean
+locale: en_US
+description: SciViews is a layer on top of the software R to enhance its language and environment.
+logo: site-logo.png
+search: true
+url: http://www.sciviews.org
 
-# Build settings
-markdown: kramdown
+# Jekyll configuration
 
-# Syntax highlighting
+permalink:   /:categories/:title/
+markdown:    kramdown
 highlighter: pygments
+sass:
+  sass_dir: _sass
+  style: compressed
+gems:
+  - jekyll-sitemap
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+mathjax: true
+
+include: [".htaccess"]
+exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "Gemfile", "Gemfile.lock", "LICENSE", "README.md", "vendor"]
+
+
+# Site owner
+owner:
+  name: Philippe Grosjean
+  avatar: phg-photo.jpg
+  email: phgrosjean@sciviews.org
+  disqus-shortname:
+  twitter: PhilGrosjean
+  facebook: #username
+  github: phgrosjean
+  stackexchange: 1888386/philippe-grosjean
+  linkedin: philippe-grosjean-5b6b29a2
+  instagram: #username
+  flickr: #username
+  tumblr: #username
+  pinterest: #username
+  weibo: #userid
+  google:
+    plus: #username
+    analytics:
+    verify:
+    ad-client:
+    ad-slot:
+  bing-verify:
