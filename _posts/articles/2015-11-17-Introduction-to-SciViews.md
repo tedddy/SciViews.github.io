@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "Introduction to SciViews"
-categories: [sciviews, rstats]
-tags: [sciviews, svMisc, svUnit, tcltk2]
+excerpt: "A quick tutorial to start using SciViews."
+modified: 2015-11-19
+categories: articles
+tags: [SciViews Box, svMisc, svUnit, tcltk2]
+image:
+  feature: banner-1.jpg
+  credit: ra2 studio (fotolia)
+  creditlink: https://fr.fotolia.com/id/71779546
+comments: true
+share: true
 ---
 
 The R package [**SciViews**](https://github.com/phgrosjean/SciViews)...
@@ -96,7 +104,7 @@ Just to test inline R expressions[^2] in **knitr**, we know the first element in
 
 {% highlight r %}
 par(mar = c(4, 4, .1, .1))
-plot(cars, pch = 19, col = 'green')  # a scatterplot
+plot(cars, pch = 19, col = 'red')  # a scatterplot
 {% endhighlight %}
 
 ![A scatterplot of the cars data](http://tinyurl.com/sciviews/jekyll/2015-11-17-Introduction-to-SciViews/cars-1.png) 

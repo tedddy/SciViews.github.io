@@ -8,7 +8,7 @@ tags: [sample-post]
 image:
   feature: banner-1.jpg
   credit: ra2 studio (fotolia)
-  creditlink: https://fr.fotolia.com/id/71779546#
+  creditlink: https://fr.fotolia.com/id/71779546
 comments: true
 share: true
 ---

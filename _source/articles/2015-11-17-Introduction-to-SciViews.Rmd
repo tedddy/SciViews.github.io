@@ -1,8 +1,16 @@
 ---
 layout: post
 title:  "Introduction to SciViews"
-categories: [sciviews, rstats]
-tags: [sciviews, svMisc, svUnit, tcltk2]
+excerpt: "A quick tutorial to start using SciViews."
+modified: 2015-11-19
+categories: articles
+tags: [SciViews Box, svMisc, svUnit, tcltk2]
+image:
+  feature: banner-1.jpg
+  credit: ra2 studio (fotolia)
+  creditlink: https://fr.fotolia.com/id/71779546
+comments: true
+share: true
 ---
 
 The R package [**SciViews**](https://github.com/phgrosjean/SciViews)...
