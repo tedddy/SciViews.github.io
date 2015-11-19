@@ -35,7 +35,7 @@ Just to test inline R expressions[^2] in **knitr**, we know the first element in
 
 ```{r cars, fig.height=5, fig.width=7, fig.cap='A scatterplot of the cars data'}
 par(mar = c(4, 4, .1, .1))
-plot(cars, pch = 19, col = 'green')  # a scatterplot
+plot(cars, pch = 19, col = 'red')  # a scatterplot
 ```
 
 ## The build script
