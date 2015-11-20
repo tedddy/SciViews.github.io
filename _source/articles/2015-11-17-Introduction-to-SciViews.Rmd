@@ -13,7 +13,7 @@ comments: true
 share: true
 ---
 
-The R package [**SciViews**](https://github.com/phgrosjean/SciViews)...
+The R package [**SciViews**](https://github.com/phgrosjean/SciViews) is the basis of the system...
 
 ----
 

@@ -2,8 +2,8 @@
 
 title: SciViews
 locale: en_US
-description: SciViews is a layer on top of the software R to enhance its language and environment.
-logo: site-logo.png
+description: A layer on top of the software R to enhance its language and environment.
+#logo: site-logo.png
 search: true
 #url: http://localhost:4000
 #http://www.sciviews.org
@@ -41,8 +41,8 @@ owner:
   twitter: PhilGrosjean
   facebook: #username
   github: phgrosjean
-  stackexchange: 1888386/philippe-grosjean
-  linkedin: philippe-grosjean-5b6b29a2
+  stackexchange: #1888386/philippe-grosjean
+  linkedin: #philippe-grosjean-5b6b29a2
   instagram: #username
   flickr: #username
   tumblr: #username
