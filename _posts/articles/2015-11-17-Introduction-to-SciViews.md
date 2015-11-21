@@ -6,9 +6,9 @@ modified: 2015-11-19
 categories: articles
 tags: [SciViews Box, svMisc, svUnit, tcltk2]
 image:
-  feature: banner-1.jpg
-  credit: ra2 studio (fotolia)
-  creditlink: https://fr.fotolia.com/id/71779546
+  feature: 
+  credit: 
+  creditlink: 
 comments: true
 share: true
 output: 
