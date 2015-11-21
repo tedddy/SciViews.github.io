@@ -3,10 +3,12 @@ $base-font: 'source-sans-pro', sans-serif;
 $heading-font: $base-font;
 $caption-font: $base-font;
 $code-font: 'source-code-pro', monospace;
-$alt-font: 'volkhov', serif;
+// $alt-font: 'volkhov', serif;
+// Avoid using too many different fonts!
+$alt-font: 'source-sans-pro', sans-serif;
 
-$doc-font-size: 16;
-$doc-line-height: 24;
+$doc-font-size: 14;
+$doc-line-height: 20;
 
 $border-radius: 3px;
 

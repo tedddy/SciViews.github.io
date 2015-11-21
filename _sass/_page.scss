@@ -40,12 +40,13 @@
 
 .entry-tags {
 	margin: 2em 0 0;
-  padding: 0;
+    padding: 0;
 	text-transform: uppercase;
-	@include font-size(16);
-	font-weight: 600;
+	@include font-size(12);
+	font-weight: 400;
   a {
-    color: $text-color;
+    color: lighten($text-color, 30);
+	@include font-size(12);
     padding: 0 5px;
   }
   li {
@@ -74,19 +75,19 @@ span + .entry-title {
 .entry-title {
 	font-family: $alt-font;
 	font-style: italic;
-	@include font-size(36,yes,36);
-	font-weight: 400;
+	@include font-size(32,yes,32);
+	font-weight: 600;
 	line-height: 1;
-	letter-spacing: -3px;
+	/* letter-spacing: -3px; */
 	a {
 		color: $black;
 		text-decoration: underline;
 	}
 	@include media($medium) {
-		@include font-size(52,yes,54);
+		@include font-size(40,yes,40);
 	}
 	@include media($large) {
-		@include font-size(68,yes,72);
+		@include font-size(44,yes,46);
 	}
 }
 
@@ -105,9 +106,9 @@ span + .entry-title {
 .entry-meta {
 	@include span-columns(12);
 	text-transform: uppercase;
-	@include font-size(14);
+	@include font-size(12);
 	a {
-		color: $text-color;
+		color: lighten($text-color, 30);
 	}
 	@include media($large) {
 		@include span-columns(2.5);
@@ -156,7 +157,7 @@ span + .entry-title {
     max-width: 760px;
     padding-right: 60px;
     padding-left: 60px;
-    @include font-size(14, no);
+    @include font-size(12, no);
   }
   @include media($large) {
     max-width: 960px;
@@ -239,7 +240,7 @@ span + .entry-title {
   	padding-left: 0;
   }
   li {
-    @include font-size(16,no,18);
+    @include font-size(14,no,16);
     border-bottom: 1px solid $border-color;
     list-style-type: none;
   }

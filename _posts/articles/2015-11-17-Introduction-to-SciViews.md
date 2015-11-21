@@ -11,9 +11,12 @@ image:
   creditlink: https://fr.fotolia.com/id/71779546
 comments: true
 share: true
+output: 
+  html_document: 
+    fig_caption: yes
 ---
 
-The R package [**SciViews**](https://github.com/phgrosjean/SciViews) is the basis of the system...
+The SciViews box, R packages, R Studio snippets, Komodo Edit plugin, ...
 
 ----
 
@@ -95,6 +98,12 @@ names(formals(servr::jekyll))  # arguments of the jekyll() function
 {% highlight text %}
 ## [1] "dir"     "input"   "output"  "script"  "serve"   "command"
 ## [7] "..."
+{% endhighlight %}
+
+
+{% highlight r %}
+# generate a table using pander()
+#pander::pander(head(mtcars), caption = "Head of the `cars` dataset.")
 {% endhighlight %}
 
 Just to test inline R expressions[^2] in **knitr**, we know the first element in `x` (created in the code chunk above) is 19.44. You can certainly draw some graphs as well:
