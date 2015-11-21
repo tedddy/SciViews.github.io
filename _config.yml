@@ -4,7 +4,7 @@ locale: en_US
 description:  Open source tools for the R language and environment.
 #logo: site-logo.png
 search: true
-url: http://www.sciviews.org
+#url: http://www.sciviews.org
 
 # Jekyll configuration
 permalink:   /:categories/:title/
