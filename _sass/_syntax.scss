@@ -7,19 +7,19 @@
    ========================================================================== */
 
 .highlight {
-	border: 1px solid lighten($black, 90);
+	border: 1px solid lighten($black, 85);
 	background-color: lighten($black, 95);
 	/*@include rounded(3px);*/
 	
 	/*background-color: #efefef;*/
 	font-family: $code-font;
 	color: #333332;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 	@include rounded($border-radius);
 	pre {
 		position: relative;
 		margin: 0;
-		padding: 1em;
+		padding: 0.7em;
 	}
 	.lineno { padding-right: 24px; color: lighten(#333332,50);}
 	.hll { background-color: #ffffcc }
@@ -83,6 +83,24 @@
 	.vg { color: #008080 } /* Name.Variable.Global */
 	.vi { color: #008080 } /* Name.Variable.Instance */
 	.il { color: #009999 } /* Literal.Number.Integer.Long */
+}
+
+/* R output */
+.highlight-output {
+	border: 1px solid lighten($black, 85);
+	background-color: $white;
+	/*@include rounded(3px);*/
+	
+	/*background-color: #efefef;*/
+	font-family: $code-font;
+	color: #333332;
+	margin-bottom: 1em;
+	@include rounded($border-radius);
+	pre {
+		position: relative;
+		margin: 0;
+		padding: 0.7em;
+	}
 }
 
 /* 

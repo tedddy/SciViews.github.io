@@ -2,12 +2,12 @@
 title: SciViews
 locale: en_US
 description:  Open source software for the R language and environment.
-#logo: site-logo.png
+logo: site-title.png
 search: true
 #url: http://www.sciviews.org
 
 # Define this to use tiles instead of a list in the homepage
-#teaser: site-teaser.png
+teaser: site-teaser.png
 
 # Jekyll configuration
 permalink:   /:categories/:title/

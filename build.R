@@ -5,8 +5,41 @@ local({
   # fall back on 'kramdown' if markdown engine is not specified
   markdown = servr:::jekyll_config('.', 'markdown', 'kramdown')
   # see if we need to use the Jekyll render in knitr
-  if (markdown == 'kramdown') {
-    knitr::render_jekyll()
+  if (markdown == 'kramdown') {  
+    myrender_jekyll <- function (highlight = c("pygments", "prettify", "none"),
+    extra = "") {
+      hi = match.arg(highlight)
+      knitr::render_markdown(TRUE)
+      if (hi == "none") 
+        return()
+      switch(hi,
+        pygments = {
+          hook.r = function(x, options) {
+            paste("\n\n{% highlight ", tolower(options$engine), 
+              if (extra != "") " ", extra, " %}\n", x, "\n{% endhighlight %}\n\n", 
+              sep = "")
+          }
+          #hook.t = function(x, options) paste("\n\n{% highlight text %}\n", 
+          #  x, "{% endhighlight %}\n\n", sep = "")
+          hook.t = function(x, options) paste("\n\n<div class=\"highlight-output\"><pre><code>", 
+            knitr:::escape_html(x), "</code></pre></div>\n\n", sep = "")
+        },
+        prettify = {
+          hook.r = function(x, options) {
+            paste("\n\n<pre><code class=\"prettyprint ", extra, 
+              "\">", knitr:::escape_html(x), "</code></pre>\n\n", sep = "")
+          }
+          hook.t = function(x, options) paste("\n\n<pre><code>", 
+            knitr:::escape_html(x), "</code></pre>\n\n", sep = "")
+        }
+      )
+      knitr::knit_hooks$set(source = function(x, options) {
+        x = paste(knitr:::hilight_source(x, "markdown", options), collapse = "\n")
+        hook.r(x, options)
+      }, output = hook.t, warning = hook.t, error = hook.t, message = hook.t)
+    }
+    #knitr::render_jekyll()
+    myrender_jekyll()
   } else knitr::render_markdown()
 
   # input/output filenames are passed as two additional arguments to Rscript
@@ -27,6 +60,6 @@ local({
       base.url = 'http://tinyurl.com/sciviews/jekyll/'
     )
   }
-  knitr::opts_knit$set(width = 70)
+  knitr::opts_knit$set(width = 78)
   knitr::knit(a[1], a[2], quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
 })

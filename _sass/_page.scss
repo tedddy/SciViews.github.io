@@ -20,13 +20,13 @@
 /* feature image */
 
 .entry-feature-image {
-	margin: 20px 0 0;
+	margin: -67px 0 0;
 	width: 100%;
 	@include media($medium) {
-		margin-top: -75px; /* move up to be overlapped by site logo */
+		margin-top: -100px; /* move up to be overlapped by site logo */
 	}
 	@include media($large) {
-		margin-top: -145px; /* move up further to be overlapped by site logo */
+		margin-top: -125px; /* move up further to be overlapped by site logo */
 	}
 }
 
@@ -138,14 +138,33 @@ span + .entry-title {
 
 /* tiles */
 .tile{
-	width:30%;
-	min-height:380px;
+	width:33%;
+	/*min-height:300px;*/
+	height:300px;
 	float:left;
 	padding-left:1%;
 	padding-right:1%;
 	font-size:80%;
-	line-height:125%;
+	/*line-height:125%;*/
+	background-color: lighten($black, 95);
+	border-width: 5px;
+	border-radius: 10px;
+	border-color: $white;
+	border-style: solid;
 }
+
+.tile-excerpt{
+    display: block;
+    float: none;
+    @include font-size(13, no, 14);
+    /*@include media($medium) {
+      width: 70%;
+    }
+    @include media($large) {
+      width: 60%;
+    }*/
+}
+
 
 /* author avatar (circular) */
 

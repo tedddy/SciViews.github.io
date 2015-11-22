@@ -35,25 +35,34 @@ cat("hello world!")
 
 
 
-{% highlight text %}
-## hello world!
-{% endhighlight %}
+<div class="highlight-output"><pre><code>## hello world!
+</code></pre></div>
 
 
 
 {% highlight r %}
 set.seed(123)
-(x = rnorm(40) + 20)
+(x <- rnorm(40) + 20)
 {% endhighlight %}
 
 
 
-{% highlight text %}
-##  [1] 19.4 19.8 21.6 20.1 20.1 21.7 20.5 18.7 19.3 19.6 21.2 20.4 20.4
-## [14] 20.1 19.4 21.8 20.5 18.0 20.7 19.5 18.9 19.8 19.0 19.3 19.4 18.3
-## [27] 20.8 20.2 18.9 21.3 20.4 19.7 20.9 20.9 20.8 20.7 20.6 19.9 19.7
-## [40] 19.6
+<div class="highlight-output"><pre><code>##  [1] 19.4 19.8 21.6 20.1 20.1 21.7 20.5 18.7 19.3 19.6 21.2 20.4 20.4 20.1
+## [15] 19.4 21.8 20.5 18.0 20.7 19.5 18.9 19.8 19.0 19.3 19.4 18.3 20.8 20.2
+## [29] 18.9 21.3 20.4 19.7 20.9 20.9 20.8 20.7 20.6 19.9 19.7 19.6
+</code></pre></div>
+
+
+
+{% highlight r %}
+# Hex numbers
+(y <- strtoi(c("0xff", "123")))
 {% endhighlight %}
+
+
+
+<div class="highlight-output"><pre><code>## [1] 255 123
+</code></pre></div>
 
 
 
@@ -83,9 +92,8 @@ knitr::kable(head(mtcars))
 
 
 
-{% highlight text %}
-## [1] 2
-{% endhighlight %}
+<div class="highlight-output"><pre><code>## [1] 2
+</code></pre></div>
 
 
 
@@ -95,10 +103,8 @@ names(formals(servr::jekyll))  # arguments of the jekyll() function
 
 
 
-{% highlight text %}
-## [1] "dir"     "input"   "output"  "script"  "serve"   "command"
-## [7] "..."
-{% endhighlight %}
+<div class="highlight-output"><pre><code>## [1] &quot;dir&quot;     &quot;input&quot;   &quot;output&quot;  &quot;script&quot;  &quot;serve&quot;   &quot;command&quot; &quot;...&quot;
+</code></pre></div>
 
 
 {% highlight r %}
@@ -124,9 +130,9 @@ Zero-configuration is required for `servr::jekyll()` to work on your Jekyll webs
 
 
 {% highlight r %}
-jekyll(dir = ".", input = c(".", "_source", "_posts"), output = c(".", 
-    "_posts", "_posts"), script = c("Makefile", "build.R"), serve = TRUE, 
-    command = "jekyll build", ...)
+jekyll(dir = ".", input = c(".", "_source", "_posts"), output = c(".", "_posts", 
+    "_posts"), script = c("Makefile", "build.R"), serve = TRUE, command = "jekyll build", 
+    ...)
 {% endhighlight %}
 
 By default, `jekyll()` looks for `.Rmd` files under the root directory, the `_source` directory, and the `_posts` directory of the Jekyll website. For example, if you put your R Markdown posts under `_source`, they will be compiled to the `_posts` directory[^3].

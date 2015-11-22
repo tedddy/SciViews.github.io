@@ -29,7 +29,7 @@ class="simple-search">
 <!-- Search result template -->
 <script type="text/x-template" id="search-result">
   <li><article>
-    <a href="##Url##">##Title## <span class="excerpt">##Excerpt##</span></a>
+    <a href="##Url##"><b>##Title##</b> <span class="excerpt">##Excerpt##</span></a>
   </article></li>
 </script>
 
@@ -46,6 +46,6 @@ class="simple-search">
 
 <div class="simple-search">
   Or look in the
-  <b><a href="http://www.sciviews.org/tags/" target="_self">tags</a></b>
+  <b><a href="../tags/" target="_self">tags</a></b>
   in the whole site.
 </div>
