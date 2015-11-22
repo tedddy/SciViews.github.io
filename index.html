@@ -9,8 +9,19 @@ image:
 search_omit: true
 ---
 
-<ul class="post-list">
-{% for post in site.posts limit:10 %} 
+<p class="entry-content">SciViews provides a series of open source software to supplement <b><a href="http://www.r-project.org">R</a></b>, for statistical computing in a reproductive workflow</a>. See the <a href="/about/">about page</a> to read more about SciViews...</p>
+
+
+{% if site.teaser %} <!-- Tiles or list depending on site.teaser -->
+<div class="tiles"> <!-- Either use tiles -->
+{% for post in site.posts limit:12 %}
+	{% include post-grid.html %}
+{% endfor %}
+</div>
+{% else %}
+<ul class="post-list">  <!-- or use a list -->
+{% for post in site.posts limit:12 %} 
   <li><article><a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a></article></li>
 {% endfor %}
 </ul>
+{% endif %}

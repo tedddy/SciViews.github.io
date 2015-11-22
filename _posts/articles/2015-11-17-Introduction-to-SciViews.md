@@ -6,9 +6,10 @@ modified: 2015-11-19
 categories: articles
 tags: [SciViews Box, svMisc, svUnit, tcltk2]
 image:
-  feature: 
+  feature: banner-1.jpg
   credit: 
   creditlink: 
+  teaser: banner-1.jpg
 comments: true
 share: true
 output: 
@@ -21,7 +22,6 @@ The SciViews box, R packages, R Studio snippets, Komodo Edit plugin, ...
 ----
 
 _This website was made using [**servr**](https://github.com/yihui/servr). For more info, see https://github.com/yihui/knitr-jekyll. Use `servr::jekyll()` in the R Studio console to start updating the site._
-
 
 ## R code chunks
 

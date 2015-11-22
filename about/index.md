@@ -10,6 +10,7 @@ image:
 ---
 
 SciViews aims to enhance your experience with [**R**](http://www.r-project.org) towards reproductive research.
+Read latest posts to this site [here](/).
 
 ## SciViews offers:
 
@@ -18,5 +19,3 @@ SciViews aims to enhance your experience with [**R**](http://www.r-project.org) 
 * A custom config for [LyX](http://www.lyx.org) to ease the production of reports and publications with R, Sweave and Knitr.
 
 <a markdown="0" href="{{ site.url }}/install" class="btn">Install SciViews</a>
-
-[^1]: Example: *domain.com/category-name/post-title*

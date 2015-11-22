@@ -6,6 +6,9 @@ description:  Open source software for the R language and environment.
 search: true
 #url: http://www.sciviews.org
 
+# Define this to use tiles instead of a list in the homepage
+#teaser: site-teaser.png
+
 # Jekyll configuration
 permalink:   /:categories/:title/
 markdown:    kramdown
@@ -53,6 +56,4 @@ owner:
     plus: #username
     analytics:
     verify:
-    ad-client:
-    ad-slot:
   bing-verify:
