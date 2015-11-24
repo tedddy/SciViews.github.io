@@ -49,12 +49,53 @@
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
-      {% if page.previous %}
+      <!--{% if page.previous %}
         <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
       {% endif %}
       {% if page.next %}
         <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
+      {% endif %}-->
+      
+    {% assign categories_posts = site.categories[page.categories.first] %}
+    {% for post in categories_posts %}
+        {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+        {% endif %}
+    {% endfor %}
+    {% for post in categories_posts %}
+        {% if post_index0 == forloop.index %}
+            {% assign next_post = post.url %}
+            {% assign next_post_title = post.title %}
+        {% endif %}
+        {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post.url %}
+            {% assign prev_post_title = post.title %}
+        {% endif %}
+    {% endfor %}
+      {% if prev_post %}
+        <a href="{{ site.url }}{{ prev_post }}" class="btn" title="{{ prev_post_title}}">Previous</a>
       {% endif %}
+      {% if next_post %}
+        <a href="{{ site.url }}{{ next_post }}" class="btn" title="{{ next_post_title }}">Next</a>
+      {% endif %}
+    
+
+    <!-- To be used to implement a category-specific TOC
+    
+    {% assign sortedcategories = page.categories | sort %}
+
+    {% for category in sortedcategories %}
+    <h3>{{ category }}</h3>
+
+    <ul>
+      {% for post in site.categories[category] %}
+        <li>{{ post.url }}</li>
+      {% endfor %}
+    </ul>
+    {% endfor %}-->
+      
+  
     </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
