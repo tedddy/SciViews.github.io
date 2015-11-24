@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Blog
-excerpt: "An archive of blog posts sorted by date."
+title: Recipes
+excerpt: "SciViews recipes sorted by date."
 search_omit: true
 ---
 
@@ -10,7 +10,7 @@ search_omit: true
 </div>
 
 <ul class="post-list">
-{% for post in site.categories.blog %} 
+{% for post in site.categories.recipes %} 
   <li><article><a href="{{ site.url }}{{ post.url }}"><b>{{ post.title }}</b> <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a></article></li>
 {% endfor %}
 </ul>

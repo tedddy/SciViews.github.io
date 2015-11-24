@@ -2,7 +2,7 @@
 layout: post
 title: "Testing Readability with a Bunch of Text"
 excerpt: "A ton of text to test readability."
-categories: articles
+categories: recipes
 tags: [sample-post, readability, test, intro]
 image:
   feature: 

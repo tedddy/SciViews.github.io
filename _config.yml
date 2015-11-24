@@ -28,6 +28,10 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..2
   enable_coderay: false
+  input: GFM
+  #smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  #hard_wrap: 0 ? Need to set this for more compatibility?
+  #Need to put GMF option for backtick-fenced code blocks
 
 mathjax: true
 

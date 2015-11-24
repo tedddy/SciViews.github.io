@@ -60,6 +60,6 @@ local({
       base.url = 'http://tinyurl.com/sciviews/jekyll/'
     )
   }
-  knitr::opts_knit$set(width = 78)
+  knitr::opts_knit$set(width = 80)
   knitr::knit(a[1], a[2], quiet = TRUE, encoding = 'UTF-8', envir = .GlobalEnv)
 })

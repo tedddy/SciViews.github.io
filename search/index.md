@@ -45,7 +45,7 @@ class="simple-search">
 </div>
 
 <div class="simple-search">
-  Or look in the
+  Or search by
   <b><a href="../tags/" target="_self">tags</a></b>
   in the whole site.
 </div>

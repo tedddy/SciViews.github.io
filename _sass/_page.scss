@@ -44,17 +44,18 @@
 	/*text-transform: uppercase;*/
 	@include font-size(12);
 	font-weight: 400;
-	background-color: $black;
-	color: $white;
+	/*background-color: $black;
+	color: $white;*/
 	
   a {
-	background-color: $black;
-	color: $white;
-	/*color: lighten($text-color, 30);*/
+	/*background-color: $black;
+	color: $white;*/
+	color: lighten($text-color, 30);
 	@include font-size(12);
     padding: 0 5px;
 	&:hover {
-      background-color: lighten($black, 10);
+      background-color: $black; /* lighten($black, 10); */
+	  color: $white;
     }
   }
   li {
