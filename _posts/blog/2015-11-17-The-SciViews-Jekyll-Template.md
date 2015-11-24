@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The SciViews Jekyll Template"
+title:  "Introducing a SciViews Jekyll Template for knitr and servr"
 excerpt: "This site is powered by Jekyll/Github-Pages combined with Knitr/R Markdown. The template allows to combine articles, books and blogs."
 modified: 2015-11-24
 categories: blog
@@ -17,19 +17,22 @@ output:
     fig_caption: yes
 ---
 
-Imagine you can write books, articles, or blogs freely with simple markup formattings, and with the statistical analyses, tables and plots automatically created by [R](http://www.r-project.org). All the gory details to shape your web site or your book, ... or both simultaneously, are handled transparently in the background. Just write - save, write - save, etc... and enjoy the almost real-time display of the final result. It would be nice, isn't it? Brilliant minds, like Yihui Xie and Hadley Wickham did the same dream and they wrote code to make it come true. We bring these tools just a little bit further in the direction of a versatile and easy to use authoring tools for data scientists.
+Imagine you can write books, articles, or blogs freely with simple markup formattings, and with the statistical analyses, tables and plots automatically created by [R](http://www.r-project.org). All the gory details to shape your web site or your book, ... or both simultaneously, are handled transparently in the background. Just write - save, write - save, ... and enjoy the almost real-time display of the final result everytime you save your work. It would be nice, isn't it? Brilliant minds, like Yihui Xie and Hadley Wickham did the same dream and they wrote code to make it come true. We bring these tools just a little bit further in the direction of a versatile and easy to use authoring tools for data scientists.
 
-The new [SciViews web site](http://www.sciviews.org) (as of 2015-11-17) is build on [Github](https://github.com) using [Github-Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com), but also [R Markdown](http://rmarkdown.rstudio.com) and [Knitr](http://yihui.name/knitr/). Yihui Xie's idea is to write posts in R Markdown (.Rmd files), and to rebuild the whole web site everytime a .Rmd page is saved. Of course, Knitr only recompiles the page that was modified, while Jekyll rebuilds the whole site according to such changes. The R package [**servr**](https://github.com/yihui/servr) makes the horse work.
+![R Studio servicing this web site](http://tinyurl.com/sciviews/jekyll/2015-11-17-The-SciViews-Jekyll-Template/RStudioServr.png)
+Figure: This blog edited in R Studio (top left) while this web site is build on every save (at right) by R (bottom left).
+
+The new [SciViews web site](http://www.sciviews.org) (as of 2015-11-17) is build on [Github](https://github.com) using [Github-Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com), but also [R Markdown](http://rmarkdown.rstudio.com) and [Knitr](http://yihui.name/knitr/). Yihui Xie's idea is to write posts in R Markdown (.Rmd files), and to rebuild the whole web site everytime a .Rmd page is saved. Of course, Knitr only recompiles the page that you modified, while Jekyll rebuilds the whole site according to such changes. The R package [**servr**](https://github.com/yihui/servr) makes the horse work.
 
 The [SciViews Jekyll template](https://github.com/SciViews/SciViews.github.io) is based on the excellent [So Simple Jekyll theme](https://github.com/mmistakes/so-simple-theme), by Michael Rose, largely modified to fit with the **servr** approach, and to allow different categories that look either like structured documents (similar to Hadley Wickham's book sites, like [Advanced R](http://adv-r.had.co.nz)), or as a collection of pages just sorted by dates (blog).
 
 ----
 
-Once the required tools are installed (see [here](http://www.r-bloggers.com/blogging-with-rmarkdown-knitr-and-jekyll/)), authoring is very simple. In [R Studio](https://www.rstudio.com), just make the root directory of your web site the active directory in R and issue `servr::jekyll()`. From this moment on, R monitors all your .Rmd files, and triggers rebuild of the web site on every change. Open your .Rmd files, edit them, save them. That's all. Once you are happy with the result, push it to Github. Done!
+Once the required tools are installed (see [here](http://www.r-bloggers.com/blogging-with-rmarkdown-knitr-and-jekyll/)), authoring is very simple. In [R Studio](https://www.rstudio.com), just make the root directory of your web site the active directory in R and issue `servr::jekyll()`. From this moment on, R monitors all your .Rmd files, and triggers rebuild of the web site on every change. Open your .Rmd files, edit them, save them. That's all. Once you are happy with the result, push your data to Github. Done!
 
 ## R code chunks
 
-Of course, as you R markdown pages embed R chunks, you include computation and statistical analyses right in your pages, like this:
+Of course, as your R markdown pages embed R chunks, you include computation and statistical analyses right inside your pages, like this:
 
 
 {% highlight r %}
@@ -50,8 +53,8 @@ cat("Hi from R and R markdown!\n")
 
 
 
-<div class="highlight-output"><pre><code>##  [1]  0.9967325 -0.8540763 -0.8765492 -1.1089690  0.6753533  0.4330215
-##  [7]  0.8557702 -0.1699891 -0.8640989 -0.7466847
+<div class="highlight-output"><pre><code>##  [1] -1.26170238 -0.11926313 -0.77281026 -0.15777420 -0.11278193  0.47171679
+##  [7]  0.39452847  0.76772094  0.48526578  0.08051614
 </code></pre></div>
 
 
@@ -83,25 +86,7 @@ cube(1:10)
 <div class="highlight-output"><pre><code>##  [1]    1    8   27   64  125  216  343  512  729 1000
 </code></pre></div>
 
-Generate a well-formatted table with `knitr::kable()`:
-
-
-{% highlight r %}
-knitr::kable(head(iris))
-{% endhighlight %}
-
-
-
-| Sepal.Length| Sepal.Width| Petal.Length| Petal.Width|Species |
-|------------:|-----------:|------------:|-----------:|:-------|
-|          5.1|         3.5|          1.4|         0.2|setosa  |
-|          4.9|         3.0|          1.4|         0.2|setosa  |
-|          4.7|         3.2|          1.3|         0.2|setosa  |
-|          4.6|         3.1|          1.5|         0.2|setosa  |
-|          5.0|         3.6|          1.4|         0.2|setosa  |
-|          5.4|         3.9|          1.7|         0.4|setosa  |
-
-The same one, but by using `pander::pander()`:
+Generate a well-formatted table with `pander::pander()`:
 
 
 {% highlight r %}
@@ -130,11 +115,12 @@ Now, a plot:
 plot(iris$Sepal.Length, iris$Petal.Width)
 {% endhighlight %}
 
-![A scatterplot of the `iris` data](http://tinyurl.com/sciviews/jekyll/2015-11-17-The-SciViews-Jekyll-Template/iris_plot-1.png) 
+![A scatterplot of the `iris` dataset](http://tinyurl.com/sciviews/jekyll/2015-11-17-The-SciViews-Jekyll-Template/iris_plot-1.png) 
+Figure: A scatterplot of the `iris` dataset.
 
 Of course, you can also embed R code in the text. For instance, we use R version 3.2.2 (2015-08-14) and 1 + 1 makes 2.
 
-This is some math:
+This is a math display:
 
 $$
 \begin{align}
@@ -158,14 +144,16 @@ jekyll(dir = ".", input = c(".", "_source", "_posts"), output = c(".", "_posts",
     ...)
 {% endhighlight %}
 
-Place your .Rmd files in `_source` subdirectory, and knitr will compile them into markdown files in the `_posts` subdirectory. Due to a [bug in Jekyll (< v2.5.3)](https://github.com/jekyll/jekyll/pull/3147), it is not a good idea to place both .Rmd and .md files in the same directory. From there, Jekyll just sees a usual series of .md files in `_posts`, and it uses them to compile the web site. The SciViews template does the rest to ensure a modern and clear organization of your material[^1].
+Place your .Rmd files in `_source` subdirectory, and **servr** will compile them into markdown files in the `_posts` subdirectory. Due to a [bug in Jekyll (< v2.5.3)](https://github.com/jekyll/jekyll/pull/3147), it is not a good idea to place both .Rmd and .md files in the same directory. From there, Jekyll just sees a usual series of .md files in `_posts`, and it uses them to compile the web site. The SciViews template does the rest to ensure a modern and clear organization of your material[^1].
 
-[^1]: Pandoc-style citations are not usable yet with Github-Pages. We have to find a workaround here. We also need to implement the code to compile PDF, ePub and MOBI version of books. Finally, it would be also nice to think about how to implement electronic lab notebooks with similar tools.
+[^1]: Pandoc-style citations are not usable yet with Github-Pages. We still have to find a workaround. We also need to implement the code to compile PDF, ePub and MOBI version of books. Finally, it would be also nice to think about how to implement electronic lab notebooks with similar tools.
 
-The central elements are the `build.R` script and `_source/Makefile` that specify how .Rmd page should be compiled (see `?servr::jekyll` for more details. **Knitr** options can also be specified in the `build.R` script.
+The central elements are the `build.R` script and `_source/Makefile` that specify how .Rmd page should be compiled (see `?servr::jekyll` for more details). **Knitr** options can also be specified in the `build.R` script.
 
-There is also a mechanism to save plots in a specific directory and to serve them from a specific address (e.g., by using your public folder of Dropbox). That way, you can keep them out of your Git/Github repository, which is always a good idea.
+There is also a built-in mechanism to save plots in a specific directory and to serve them from a specific address (e.g., by using your public dropbox folder). That way, you can keep these binary files out of your Git/Github repository, which is always a good idea.
 
 ## Further reading
 
-The original files that come with the So Simple theme (slightly edited) are here: [the installation instructions](../../theme-setup/), and an [example of formattings](../../theme-setup/sample.html).
+[Yihui Xie's post](http://yihui.name/knitr-jekyll/2014/09/jekyll-with-knitr.html) explains how to set up a web site with default Jekyll template to use `servr::jekyll()`. A good starting point to understand how it works in fine details.
+
+The original files that come with the So Simple theme (slightly edited) are also useful: [installation instructions](../../theme-setup/), and an [example of formattings](../../theme-setup/sample.html).
