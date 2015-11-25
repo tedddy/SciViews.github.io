@@ -19,3 +19,7 @@ Read latest posts to this site [here](/).
 * A custom config for [LyX](http://www.lyx.org) to ease the production of reports and publications with R, Sweave and Knitr.
 
 <a markdown="0" href="{{ site.url }}/install/" class="btn" target="_self">Install SciViews</a>
+
+## FAQ
+
+* ... TODO

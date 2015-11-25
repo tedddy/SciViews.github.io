@@ -1,0 +1,85 @@
+---
+layout: post
+title:  "R Tcl/Tk recipes"
+excerpt: "Tcl/Tk is integrated with R (package tcltk). Here is how to use it..."
+author: james_and_philippe
+modified: 2015-11-25
+categories: recipes
+tags: [tcltk, GUI, programmation]
+image:
+  feature: banner-tcltk.png
+  credit: 
+  creditlink: 
+  teaser: banner-tcltk.png
+comments: true
+share: true
+---
+
+**[Tcl](http://www.tcl.tk)** (Tool Command Language) is a dynamic scripting language that is easily embedded in other applications. **[Tk](http://www.tkdocs.com)** is a cross-platform graphical user interface (GUI) toolkit. Both are useable from within R thanks to the [tcltk package](https://stat.ethz.ch/R-manual/R-devel/library/tcltk/html/tcltk-package.html). The Tk toolkit is a decent one, but not the most feature-rich. However, the big advantage of Tcl/Tk is its wide availability in all platforms supported by R: the package is maintained by the R Core Team, and it is shipped with R itself. To check if Tcl/Tk is available, use the command `capabilities("tcltk")`.
+
+The [tcltk2]() package is also available from [CRAN](). It offers additional possibilities and more widgets. These recipes show how to use both the tcltk and the tcltk2 packages with R to build a GUI, or to use other potentials of Tcl.
+
+```{r banner_dialog, eval=FALSE, echo=FALSE}
+library(tcltk2)
+tt <- tktoplevel()
+tktitle(tt) <- "R Tcl/Tk" 
+x.entry <- tk2entry(tt)
+y.entry <- tk2entry(tt)
+tkgrid(tk2label(tt, text = "GUI design using:")) #, columnspan = 2)
+#tkgrid(tk2label(tt, text = "x"), x.entry)
+#tkgrid(tk2label(tt,text = "y"), y.entry)
+tkgrid(x.entry)
+tkgrid(y.entry)
+but <- tk2button(tt, text = "OK")
+tkgrid(but)
+```
+---
+
+## Basic techniques
+
+* Simple toplevel window with an OK button
+* Message boxes
+* File open/save dialogs
+* Pull-down menus and popup menus
+* A modal dialog box
+* Simple non-modal dialog with OK and Cancel buttons and a title
+* Basic widgets
+
+## Making a button to trigger a function call
+
+* Adding and changing text labels
+* Checkboxes
+* Radio buttons
+* Edit boxes
+* List boxes
+
+## Additional widgets
+
+* Text windows (editable or non-editable)
+* Scrollbars
+* Drop-down combo boxes
+* Frames
+* Sliders
+* The color-selection widget
+* Displaying images in Tk windows
+* Using the Tk table widget
+* Using the tree (drill-down) widget
+* The date entry and calendar widgets
+* The tabbed notebook widget
+* The scrollable frame 
+
+## Advanced tcltk coding
+
+* Specifying the layout
+* Specifying which window is active (focused)
+* Fonts
+* Binding events (e.g. a key-press) to functions and generating events
+* The wait cursor and other cursors
+* Exception handling
+* Evaluating R code from a text window (a scripting widget)
+* Plotting graphs with tkrplot
+* Interactive graphics with tkrplot
+
+## Useful links
+
+* Other sources of R tcltk help/examples

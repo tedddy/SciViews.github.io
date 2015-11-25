@@ -10,11 +10,11 @@ philippe_grosjean:
 #  google:
 #    plus: phgrosjean
 
-#another_user:
-#  name: Another User
-#  email: another@mail.com
-#  bio: "Who am I? Nobody and everybody at the same time!"
-#  avatar: bio-photo.jpg
+james_and_philippe:
+  name: James Wettenhall & Philippe Grosjean
+  email: another@mail.com
+  bio: 
+  avatar: bio-photo.jpg
 #  twitter: anotheruser
 #  google:
 #    plus: AnotherUser
