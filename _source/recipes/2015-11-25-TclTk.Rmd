@@ -4,8 +4,8 @@ title:  "R Tcl/Tk recipes"
 excerpt: "Tcl/Tk is integrated with R (package tcltk). Here is how to use it..."
 author: james_and_philippe
 modified: 2015-11-25
-categories: recipes
-tags: [tcltk, GUI, programmation]
+categories: [recipes, tcltk]
+tags: [tcltk, tcltk2, GUI, programming]
 image:
   feature: banner-tcltk.png
   credit: 
@@ -32,6 +32,10 @@ tkgrid(x.entry)
 tkgrid(y.entry)
 but <- tk2button(tt, text = "OK")
 tkgrid(but)
+
+# Note: in Tcl, everything is a string (http://wiki.tcl.tk/3018)
+# eases the exchanges between R and Tcl, through strings.
+# But R does not accepts \0 inside strings => show how to overcome this!
 ```
 ---
 
