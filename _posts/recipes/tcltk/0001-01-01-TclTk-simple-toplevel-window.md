@@ -5,6 +5,7 @@ excerpt: "Create a simple Tk window with one widget (an OK button that closes th
 author: philippe_grosjean
 modified: 2015-11-29
 categories: [tcltk, recipes]
+section: "Basic techniques"
 tags: [tcltk, tcltk2, GUI, programming]
 image:
   feature: banner-tcltk.png
@@ -103,4 +104,4 @@ The default theme on Linux is `clearlooks`, which gives the next visual:
 
 ![A Tk window]({{ site-url }}/images/tcltk-screenshots/okbox3.png)
 
-_TODO: what was learned + what to do next?_
+---

@@ -5,6 +5,7 @@ excerpt: "Use Tk message boxes in R."
 author: james_and_philippe
 modified: 2015-12-01
 categories: [tcltk, recipes]
+section: "Basic techniques"
 tags: [tcltk, GUI, programming]
 image:
   feature: banner-tcltk.png
@@ -72,4 +73,3 @@ tkmessageBox(message = "Do you want to save before quitting?",
 
 ![A Tk window]({{ site-url }}/images/tcltk-screenshots/messagebox5.png)
 
-_We have learn how to create a message box with tcltk. In the next section, we will use open and save file dialog boxes._
