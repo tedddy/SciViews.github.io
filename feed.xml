@@ -24,10 +24,15 @@ sitemap: false
   <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
   <link rel="alternate" type="text/html" href="{{ site.url }}{{ post.url }}" />
   <id>{{ site.url }}{{ post.id }}</id>
-  {% if post.modified %}<updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>
-  <published>{{ post.date | date_to_xmlschema }}</published>
-  {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
-  <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
+  {% assign year = post.date | date: "%Y" | plus: 0 %}
+  {% if year > 2000 %} <!-- dates before 2000 are not dates but articles ordering -->
+    {% if post.modified %}<updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    {% else %}<published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>{% endif %}
+  {% else %} <!-- post.date only serves to order articles, refer to post.modified only -->
+  <published>{{ post.modified | to_xmlschema }}T00:00:00-00:00</published>
+  <updated>{{ post.modified | to_xmlschema }}T00:00:00-00:00</updated>{% endif %}
   <author>
     <name>{{ author.name }}</name>
     <uri>{{ site.url }}</uri>

@@ -21,8 +21,9 @@ search_omit: true
 </div>
 {% else %}
 <ul class="post-list">  <!-- or use a list -->
-{% for post in site.posts limit:12 %} 
-  <li><article><a href="{{ site.url }}{{ post.url }}"><b>{{ post.title }}</b> <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% if post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a></article></li>
+{% for post in site.posts limit:12 %}
+  {% assign year = post.date | date: "%Y" | plus: 0 %}
+  <li><article><a href="{{ site.url }}{{ post.url }}"><b>{{ post.title }}</b> {% if year > 2000 %}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% endif %}{% if post.excerpt %} <span class="excerpt">{{ post.excerpt }}</span>{% endif %}</a></article></li>
 {% endfor %}
 </ul>
 {% endif %}
