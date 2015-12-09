@@ -39,9 +39,9 @@ onOK <- function() {
   tkdestroy(win1)
   switch(rbVal,
     "apples" = tkmessageBox(
-      message="Good choice! An apple a day keeps the doctor away!"),
+      message = "Good choice! An apple a day keeps the doctor away!"),
     "oranges" = tkmessageBox(
-      message="Good choice! Oranges are full of vitamin C!")
+      message = "Good choice! Oranges are full of vitamin C!")
   )
 }
 win1$env$butOK <- tk2button(win1, text = "OK", width = -6, command = onOK)
