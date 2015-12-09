@@ -24,7 +24,7 @@ res <- tkmessageBox(title = "Greetings from R TclTk",
   message = "Hello, world!", icon = "info", type = "ok")
 ```
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/messagebox.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/messagebox.png)
 
 After pressing the `OK` button, we can check the return value of the message box function.
 
@@ -44,7 +44,7 @@ res <- tkmessageBox(title = "Greetings from R TclTk",
   message = "Hello, world!                 ", icon = "info", type = "ok")
 ```
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/messagebox2.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/messagebox2.png)
 
 Of course, sometimes it is desirable to have other buttons and/or other icons in a message box. The following examples illustrate some typical choices of buttons and icons.
 
@@ -52,18 +52,18 @@ Of course, sometimes it is desirable to have other buttons and/or other icons in
 tkmessageBox(message = "An error has occurred!", icon = "error", type = "ok")
 ```
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/messagebox3.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/messagebox3.png)
 
 ```{r, eval=FALSE}
 tkmessageBox(message = "This is a warning!", icon = "warning", type = "ok")
 ```
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/messagebox4.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/messagebox4.png)
 
 ```{r, eval=FALSE}
 tkmessageBox(message = "Do you want to save before quitting?",
     icon = "question", type = "yesnocancel", default = "yes")
 ```
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/messagebox5.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/messagebox5.png)
 

@@ -19,7 +19,7 @@ output:
 
 Imagine you can write books, articles, or blogs freely with simple markup formattings, and with the statistical analyses, tables and plots automatically created by [R](http://www.r-project.org). All the gory details to shape your web site or your book, ... or both simultaneously, are handled transparently in the background. Just write - save, write - save, ... and enjoy the almost real-time display of the final result everytime you save your work. It would be nice, isn't it? Brilliant minds, like Yihui Xie and Hadley Wickham did the same dream and they wrote code to make it come true. We bring these tools just a little bit further in the direction of a versatile and easy to use authoring tools for data scientists.
 
-![R Studio servicing this web site](http://tinyurl.com/sciviews/jekyll/2015-11-17-The-SciViews-Jekyll-Template/RStudioServr.png)
+![R Studio servicing this web site]({{ site.images }}/2015-11-17-The-SciViews-Jekyll-Template/RStudioServr.png)
 Figure: This blog edited in R Studio (top left) while this web site is build on every save (at right) by R (bottom left).
 
 The new [SciViews web site](http://www.sciviews.org) (as of 2015-11-17) is build on [Github](https://github.com) using [Github-Pages](https://pages.github.com) and [Jekyll](https://jekyllrb.com), but also [R Markdown](http://rmarkdown.rstudio.com) and [Knitr](http://yihui.name/knitr/). Yihui Xie's idea is to write posts in R Markdown (.Rmd files), and to rebuild the whole web site everytime a .Rmd page is saved. Of course, Knitr only recompiles the page that you modified, while Jekyll rebuilds the whole site according to such changes. The R package [**servr**](https://github.com/yihui/servr) makes the horse work.
@@ -53,8 +53,8 @@ cat("Hi from R and R markdown!\n")
 
 
 
-<div class="highlight-output"><pre><code>##  [1] -1.26170238 -0.11926313 -0.77281026 -0.15777420 -0.11278193  0.47171679
-##  [7]  0.39452847  0.76772094  0.48526578  0.08051614
+<div class="highlight-output"><pre><code>##  [1]  0.2847853  3.2023797  0.4936989  0.6935461 -0.7372403 -0.7103407
+##  [7] -0.9727900 -1.2384989  0.9791702 -1.6099924
 </code></pre></div>
 
 
@@ -115,7 +115,7 @@ Now, a plot:
 plot(iris$Sepal.Length, iris$Petal.Width)
 {% endhighlight %}
 
-![A scatterplot of the `iris` dataset](http://tinyurl.com/sciviews/jekyll/2015-11-17-The-SciViews-Jekyll-Template/iris_plot-1.png) 
+![A scatterplot of the `iris` dataset](https://dl.dropboxusercontent.com/u/19371999/jekyll/2015-11-17-The-SciViews-Jekyll-Template/iris_plot-1.png) 
 Figure: A scatterplot of the `iris` dataset.
 
 Of course, you can also embed R code in the text. For instance, we use R version 3.2.2 (2015-08-14) and 1 + 1 makes 2.

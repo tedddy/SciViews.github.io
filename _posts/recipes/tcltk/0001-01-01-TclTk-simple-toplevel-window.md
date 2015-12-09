@@ -33,7 +33,7 @@ tkgrid(butOK)
 
 You should get the following window:
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/okbox.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/okbox.png)
 
 Click `OK` to close the window
 
@@ -79,7 +79,7 @@ tkgrid(win2$env$butOK, padx = 70, pady = 30)
 
 The button has now much more space around it. On Windows, it looks native, but on Linux it is still looking old-fashioned...
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/okbox2.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/okbox2.png)
 
 Our code is now becoming quite complicated. However, the **tcltk2** package would be helpful here.
 
@@ -102,6 +102,6 @@ win3$butOK <- tk2button(text = "OK", width = -6, command = TkCmd_destroy(parent)
 
 The default theme on Linux is `clearlooks`, which gives the next visual:
 
-![A Tk window]({{ site-url }}/images/tcltk-screenshots/okbox3.png)
+![A Tk window]({{ site.images }}/recipes-tcltk/okbox3.png)
 
 ---

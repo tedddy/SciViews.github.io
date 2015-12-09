@@ -31,9 +31,9 @@ if (!nchar(filename)) {
 
 The code above produces the following window:
 
-![An Open file box]({{ site-url }}/images/tcltk-screenshots/opensavebox.png)
+![An Open file box]({{ site.images }}/recipes-tcltk/opensavebox.png)
 
-![Messagebox]({{ site-url }}/images/tcltk-screenshots/opensavebox2.png)
+![Messagebox]({{ site.images }}/recipes-tcltk/opensavebox2.png)
 
 
 ## The Save file dialog
@@ -50,11 +50,11 @@ if (!nchar(filename)) {
 
 With this code, you get the following dialog box:
 
-![A Save file box]({{ site-url }}/images/tcltk-screenshots/opensavebox3.png)
+![A Save file box]({{ site.images }}/recipes-tcltk/opensavebox3.png)
 
 Now we will assume that the user pressed `Cancel`:
 
-![Messagebox]({{ site-url }}/images/tcltk-screenshots/opensavebox4.png)
+![Messagebox]({{ site.images }}/recipes-tcltk/opensavebox4.png)
 
 
 ## Opening CSV files with the open file dialog
@@ -79,11 +79,11 @@ tkpack(win1$env$butSelect)
 # The content of the CSV file is placed in the variable 'csv_data' in the global environment
 {% endhighlight %}
 
-![Button to open a file]({{ site-url }}/images/tcltk-screenshots/opensavebox5.png)
+![Button to open a file]({{ site.images }}/recipes-tcltk/opensavebox5.png)
 
 Pressing the button gives the following **OpenFile** dialog, which knows which file extension to look for. In this case, only files with the extension `.csv` are displayed.
 
-![Open a csv file box]({{ site-url }}/images/tcltk-screenshots/opensavebox6.png)
+![Open a csv file box]({{ site.images }}/recipes-tcltk/opensavebox6.png)
 
 
 ## Saving (or opening) files with more than one possible extension
@@ -96,4 +96,4 @@ jpeg_filename <- tclvalue(tkgetSaveFile(initialfile = "foo.jpg",
   filetypes = "{ {JPEG Files} {.jpg .jpeg} } { {All Files} * }"))
 {% endhighlight %}
 
-![Open Jpeg file box]({{ site-url }}/images/tcltk-screenshots/opensavebox7.png)
+![Open Jpeg file box]({{ site.images }}/recipes-tcltk/opensavebox7.png)

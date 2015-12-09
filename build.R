@@ -57,7 +57,7 @@ local({
     knitr::opts_chunk$set(fig.path = sprintf('%s/', gsub('^.+/', '', d)))
     knitr::opts_knit$set(
       base.dir = '~/Dropbox/Public/jekyll/',
-      base.url = 'http://tinyurl.com/sciviews/jekyll/'
+      base.url = 'https://dl.dropboxusercontent.com/u/19371999/jekyll/'
     )
   }
   knitr::opts_knit$set(width = 80)
