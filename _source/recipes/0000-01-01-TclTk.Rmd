@@ -52,14 +52,6 @@ tkgrid(but)
   {% endif %}
 {% endfor %}
 
-* Edit boxes
-* List boxes
-
-## Additional widgets
-
-* Text windows (editable or non-editable)
-* Scrollbars
-* Drop-down combo boxes
 * Frames
 * Sliders
 * The color-selection widget
