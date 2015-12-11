@@ -52,7 +52,6 @@ tkgrid(but)
   {% endif %}
 {% endfor %}
 
-* Frames
 * Sliders
 * The color-selection widget
 * Displaying images in Tk windows
