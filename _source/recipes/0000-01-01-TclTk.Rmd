@@ -52,7 +52,6 @@ tkgrid(but)
   {% endif %}
 {% endfor %}
 
-* Sliders
 * The color-selection widget
 * Displaying images in Tk windows
 * Using the Tk table widget
