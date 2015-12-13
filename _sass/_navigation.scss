@@ -2,6 +2,26 @@
    Top navigation
    ========================================================================== */
 
+.navigation-top {
+  position: fixed;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 5px;
+  background-color: $black;
+}
+
+.navigation-bottom {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1px;
+  background-color: $body-color;
+  @include media($medium) {
+    height: 85px;
+  }
+}
+
 .navigation-wrapper {
   text-align: center;
   @include clearfix;
@@ -13,11 +33,10 @@
     padding: 4px 20px;
     background-color: $black;
     @include media($medium) {
-      width: auto;
-      /* First trial for a fixed header
       position: fixed;
-      width: 90%;
-      left: 5%; */
+      /* width: auto; */
+      width: 94%;
+      left: 3%;
       @include rounded(0 0 10px 10px);
     }
     @include clearfix;
@@ -27,7 +46,7 @@
     float: left;
     list-style: none;
     text-align: center;
-    @include font-size(14,no);
+    @include font-size(13,no);
     text-transform: uppercase;
     color: $white;
     @include media($medium) {
@@ -50,6 +69,51 @@
     &:hover {
       background-color: lighten($black, 10);
     }
+  }
+  a.disabled:hover {
+    background-color: $black;
+    @include box-shadow($shadow: inset 0 0 1px $black); 
+  }  
+  ul ul {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 12px;
+    width: 240px;
+	background-color: $black;
+	padding: 0;
+    @include media($medium) {
+      text-align: left;
+      padding-left: 10px;
+      position: absolute;
+      width: 420px;
+      left: 2%;
+      top: 35px;
+      @include rounded(0 0 10px 10px);
+    }
+  }
+
+  ul ul li {
+	float: none;
+	width: 400px;
+    padding-left: 5px;
+    padding-right: 5px;
+    @include font-size(12,no);
+    text-align: left;
+    text-transform: none;
+  }
+
+  ul ul a {
+    line-height: 100%;
+	padding: 5px 5px;
+  }
+
+  ul ul span {
+	color: lighten($black, 40);
+  }
+  
+  ul li:hover > ul {
+	display: block;
   }
 }
 

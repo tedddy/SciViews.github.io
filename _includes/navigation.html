@@ -1,24 +1,79 @@
+<div class="navigation-top"></div>
 <div class="navigation-wrapper">
 	<nav role="navigation" id="site-nav"> <!--</nav> class="animated drop">-->
-	    <ul>
-      {% for link in site.data.navigation %}
-		    {% if link.url contains 'http' %}
-		        {% assign domain = '' %}
-		        {% else %}
-		        {% assign domain = site.url %}
-		    {% endif %}
+	    <ul>      
+		<!-- compute the TOC in the current category -->
+	{% assign categories_posts = site.categories[page.categories.first] %}
+    {% for post in categories_posts %}
+        {% if post.url == page.url %}
+            {% assign post_index0 = forloop.index0 %}
+            {% assign post_index1 = forloop.index %}
+        {% endif %}
+    {% endfor %}
+    {% for post in categories_posts %}
+        {% if post_index0 == forloop.index %}
+            {% assign next_post = post.url %}
+            {% assign next_post_title = post.title %}
+        {% endif %}
+        {% if post_index1 == forloop.index0 %}
+            {% assign prev_post = post.url %}
+            {% assign prev_post_title = post.title %}
+        {% endif %}
+    {% endfor %}
+		
+		<!-- navigation items -->
+      {% if prev_post %}
+        <li style="float:left;"><a href="{{ site.url }}{{ prev_post }}" title="Previous page: {{ prev_post_title}}"><i class="fa fa-chevron-left"></i></a></li>
+      {% endif %}
+	  
+	    <li style="float:left;"><a href="" title="Up"><i class="fa fa-chevron-up"></i></a>
+		{% if page.categories %}
+			<!-- Category-specific TOC-->
+			{% assign section = "none" %}
+			{% assign sortedcategories = page.categories | sort %}
+			{% for category in sortedcategories %}
+			<ul>
+				{% for post in site.categories[category] reversed %}
+					{% if post.section != "" %}
+						{% if post.section != section %}
+				<span>{{ post.section }}</span>
+							{% assign section = post.section %}
+						{% endif %}
+					{% endif %}
+				<li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a></li>
+				{% endfor %}
+			</ul>
+			{% endfor %}
+		{% endif %}
+		</li>
+		
+      {% if next_post %}
+        <li style="float:left;"><a href="{{ site.url }}{{ next_post }}" title="Next page: {{ next_post_title }}"><i class="fa fa-chevron-right"></i></a></li>
+	  {% endif %}		
+        <li><a class="disabled">&nbsp;</a></li>
+		
+	  {% for link in site.data.navigation %}
+		{% if link.url contains 'http' %}
+		    {% assign domain = '' %}
+		{% else %}
+		    {% assign domain = site.url %}
+		{% endif %}
 		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
-		  {% endfor %}
+	  {% endfor %}
+		  
+			<!-- search items -->
+			<li style="float:right;"><a href="{{ domain }}/search/" title="Search"><i class="fa fa-search"></i></a></li>
+			<li style="float:right;"><a href="{{ domain }}/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>
 	    </ul>
 	</nav>
 </div><!-- /.navigation-wrapper -->
+<div class="navigation-bottom"></div>
 
 {% include browser-upgrade.html %}
 
 {% if page.image.feature %}<header class="masthead">
 	{% if site.logo != null %}
 		<div class="wrap">
-			<!--<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>-->
 			<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
 		</div>
 	{% endif %}
@@ -26,7 +81,6 @@
 {% else %}<header class="masthead">
 	<div class="wrap">
       {% if site.logo != null %}
-  		<!--<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }}" class="animated fadeInDown"></a>-->
 		<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }}" class="animated fadeInDown"></a>
       {% else %}
         <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/"><img src="{{ site.url }}/images/site-title.png" width="346" height="124" alt="{{ site.title }} logo"></a></h1>

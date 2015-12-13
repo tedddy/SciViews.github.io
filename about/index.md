@@ -18,7 +18,7 @@ Read latest posts to this site [here](/).
 * SciViews Box, a virtual machine that provides a reproducible environment for your data analyses.
 * A custom config for [LyX](http://www.lyx.org) to ease the production of reports and publications with R, Sweave and Knitr.
 
-<a markdown="0" href="{{ site.url }}/install/" class="btn" target="_self">Install SciViews</a>
+<a markdown="0" href="{{ site.url }}/install/" class="btn" target="_self"><i class="fa fa-download"></i> Install SciViews</a>
 
 ## FAQ
 
