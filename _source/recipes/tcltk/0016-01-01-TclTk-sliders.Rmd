@@ -4,7 +4,7 @@ title:  "Sliders in R TclTk"
 excerpt: "Select values in a range with sliders in Tk Windows."
 author: james_and_philippe
 modified: 2015-12-11
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Additional widgets"
 tags: [tcltk, GUI, programming]
 image:

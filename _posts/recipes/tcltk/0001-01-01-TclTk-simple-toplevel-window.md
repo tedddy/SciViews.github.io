@@ -4,7 +4,7 @@ title:  "A simple Tk toplevel window with an OK button"
 excerpt: "Create a simple Tk window with one widget (an OK button that closes the window)."
 author: philippe_grosjean
 modified: 2015-11-29
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic techniques"
 tags: [tcltk, tcltk2, GUI, programming]
 image:

@@ -4,7 +4,7 @@ title:  "Checkboxes in R TclTk"
 excerpt: "Creating and interacting with Tk checkboxes."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic widgets"
 tags: [tcltk, GUI, programming]
 image:

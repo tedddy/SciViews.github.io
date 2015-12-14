@@ -4,7 +4,7 @@ title:  "Menus in TclTk"
 excerpt: "Add menus and pop-up menus to a R Tcl/Tk window."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic techniques"
 tags: [tcltk, GUI, programming]
 image:

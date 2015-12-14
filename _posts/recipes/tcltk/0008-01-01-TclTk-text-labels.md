@@ -4,7 +4,7 @@ title:  "Text labels in Tk windows"
 excerpt: "Adding and changing text labels with Tk."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic widgets"
 tags: [tcltk, GUI, programming]
 image:

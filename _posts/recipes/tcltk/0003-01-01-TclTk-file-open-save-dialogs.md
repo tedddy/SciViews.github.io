@@ -4,7 +4,7 @@ title:  "File Open/Save dialogs in R tcltk"
 excerpt: "Select files with dialog boxes."
 author: james_and_philippe
 modified: 2015-12-01
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic techniques"
 tags: [tcltk, GUI, programming]
 image:

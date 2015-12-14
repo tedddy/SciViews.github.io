@@ -4,7 +4,7 @@ title:  "Radiobuttons in R TclTk"
 excerpt: "Radiobuttons in Tk window for selection in a limited number of items."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic widgets"
 tags: [tcltk, GUI, programming]
 image:

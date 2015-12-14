@@ -4,7 +4,7 @@ title:  "A button that triggers a function call"
 excerpt: "Create a Tk button that calls a R function when clicked."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic widgets"
 tags: [tcltk, GUI, programming]
 image:

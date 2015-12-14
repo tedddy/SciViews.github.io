@@ -4,7 +4,7 @@ title:  "Simple non-modal dialog box"
 excerpt: "Create a non-modal dialog box with a title and OK / Cancel buttons."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic techniques"
 tags: [tcltk, GUI, programming]
 image:

@@ -4,7 +4,7 @@ title:  "Modal dialog boxes"
 excerpt: "Create a dialog box that freezes R until it is closed (modal)."
 author: james_and_philippe
 modified: 2015-12-09
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic techniques"
 tags: [tcltk, GUI, programming]
 image:

@@ -4,7 +4,7 @@ title:  "Message boxes in R tcltk"
 excerpt: "Use Tk message boxes in R."
 author: james_and_philippe
 modified: 2015-12-01
-categories: [tcltk, recipes]
+categories: [recipes, tcltk]
 section: "Basic techniques"
 tags: [tcltk, GUI, programming]
 image:
