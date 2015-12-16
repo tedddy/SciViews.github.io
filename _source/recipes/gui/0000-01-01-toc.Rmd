@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "GUI recipes"
+excerpt: "Graphical User Interface recipes: svGUI, svWidgets & svDialogs."
+author: philippe_grosjean
+modified: 2015-12-14
+categories: [recipes, gui]
+tags: [GUI, programming]
+image:
+  feature: banner-tcltk.png
+  credit: 
+  creditlink: 
+  teaser: banner-tcltk.png
+comments: true
+share: true
+---
+
+TODO...
+---
+
+{% assign section = "none" %}
+{% for post in site.categories.gui reversed %}
+  {% assign year = post.date | date: "%Y" | plus: 0 %}
+  {% if year > 0 %}
+    {% if post.section != "" %}
+      {% if post.section != section %}
+<h2>{{ post.section }}</h2>
+        {% assign section = post.section %}
+      {% endif %}
+    {% endif %}
+  <li><article><a href="{{ site.url }}{{ post.url }}"><b>{{ post.title }}</b> {% if post.excerpt %} <span class="excerpt"><br/>{{ post.excerpt }}</span>{% endif %}</a></article></li>
+  {% endif %}
+{% endfor %}

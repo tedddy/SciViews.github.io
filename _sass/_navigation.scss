@@ -69,6 +69,10 @@
     &:hover {
       background-color: lighten($black, 10);
     }
+    &.current{
+      color: $black;
+      background-color: $white;
+    }
   }
   a.disabled:hover {
     background-color: $black;
@@ -77,27 +81,24 @@
   ul ul {
 	display: none;
 	position: absolute;
-	top: 0;
-	left: 12px;
-    width: 240px;
+	top: auto;
+    left: auto;
+    width: auto;
 	background-color: $black;
 	padding: 0;
     @include media($medium) {
       text-align: left;
       padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
       position: absolute;
-      width: 420px;
-      left: 2%;
-      top: 35px;
       @include rounded(0 0 10px 10px);
     }
   }
 
   ul ul li {
 	float: none;
-	width: 400px;
-    padding-left: 5px;
-    padding-right: 5px;
+	/*width: 400px;*/
     @include font-size(12,no);
     text-align: left;
     text-transform: none;
@@ -105,7 +106,12 @@
 
   ul ul a {
     line-height: 100%;
-	padding: 5px 5px;
+	padding-left: 10px;
+    padding-right: 10px;
+    &.current{
+      color: $black;
+      background-color: $white;
+    }
   }
 
   ul ul span {
@@ -113,7 +119,9 @@
   }
   
   ul li:hover > ul {
-	display: block;
+    @include media($medium) {
+      display: block;
+    }
   }
 }
 
