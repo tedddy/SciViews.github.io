@@ -54,16 +54,14 @@
         {% endif %}
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
-    <!--<nav class="pagination" role="navigation">
-      {% if page.previous %}
-        <a href="{{ site.url }}{{ page.previous.url }}" class="btn" title="{{ page.previous.title }}">Previous</a>
+    <nav class="pagination" role="navigation">
+      {% if prev_post %}
+        <a href="{{ site.url }}{{ prev_post }}" class="btn" title="{{ prev_post_title }}"><i class="fa fa-chevron-left"></i> Prev</a>
       {% endif %}
-      {% if page.next %}
-        <a href="{{ site.url }}{{ page.next.url }}" class="btn" title="{{ page.next.title }}">Next</a>
+      {% if next_post %}
+        <a href="{{ site.url }}{{ next_post }}" class="btn" title="{{ next_post_title }}">Next <i class="fa fa-chevron-right"></i></a>
       {% endif %}
-      
-
-    </nav>--><!-- /.pagination -->
+    </nav><!-- /.pagination -->
   </article>
 </div><!-- /#main -->
 
