@@ -1,11 +1,10 @@
 <div class="navigation-top"></div>
 <div class="navigation-wrapper">
   <nav role="navigation" id="site-nav"> <!--</nav> class="animated drop">-->
-    <ul{% if withtoc %} class="with-toc"{% endif %}>      
+    <ul{% if pagetoc %} class="with-toc"{% endif %}>
     <!-- compute the TOC in the current category -->
-    {% if withtoc %}
-      {% assign category = page.categories[1] %}
-      {% assign categories_posts = site.categories[category] %}
+    {% if pagetoc %}
+      {% assign categories_posts = site.categories[pagetoc] %}
     {% else %}
       {% assign categories_posts = site.categories[page.categories.first] %}
     {% endif %}
@@ -32,11 +31,11 @@
     {% endif %}
 
       <li class="nav-left"><a href="" title="Up"><i class="fa fa-chevron-up"></i></a>
-      {% if withtoc %}
+      {% if pagetoc %}
         <!-- Category-specific TOC-->
         {% assign section = "none" %}
         <ul class="toc">
-        {% for post in site.categories[category] reversed %}
+        {% for post in site.categories[pagetoc] reversed %}
           {% if post.section != "" %}
             {% if post.section != section %}
               <span>{{ post.section }}</span>
@@ -86,14 +85,14 @@
 
 {% include browser-upgrade.html %}
 
-{% if page.image.feature %}<header class="masthead{% if withtoc %} entry-with-toc{% endif %}">
+{% if page.image.feature %}<header class="masthead{% if pagetoc %} entry-with-toc{% endif %}">
   {% if site.logo != null %}
     <div class="wrap">
       <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
     </div>
   {% endif %}
 </header><!-- /.masthead -->
-{% else %}<header class="masthead{% if withtoc %} entry-with-toc{% endif %}">
+{% else %}<header class="masthead{% if pagetoc %} entry-with-toc{% endif %}">
   <div class="wrap">
     {% if site.logo != null %}
       <a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }}" class="animated fadeInDown"></a>
