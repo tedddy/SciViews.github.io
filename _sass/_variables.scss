@@ -3,15 +3,9 @@ $base-font: 'source-sans-pro', sans-serif;
 $heading-font: $base-font;
 $caption-font: $base-font;
 $code-font: 'source-code-pro', monospace;
-//$alt-font: 'volkhov', serif;
-// Avoid using too many different fonts!
-//$alt-font: 'source-sans-pro', sans-serif;
-//$alt-font: 'Ubuntu', sans-serif;
-$alt-font: 'Open Sans', sans-serif;
-
+$alt-font: 'volkhov', serif;
 $doc-font-size: 14;
 $doc-line-height: 18;
-
 $border-radius: 3px;
 
 
@@ -48,3 +42,6 @@ $small            : "only screen and (min-width: 37.5em)";
 $medium           : "only screen and (min-width: 48em)";
 $large            : "only screen and (min-width: 62em)";
 $x-large          : "only screen and (min-width: 86.375em)";
+
+// MISC ========================================================
+$left-pane        : 220px;

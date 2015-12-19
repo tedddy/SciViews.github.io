@@ -9,10 +9,11 @@
 
 <body id="post">
 
+{% assign withtoc = page.categories[1] %}
 {% include navigation.html %}
 
 <div id="main" role="main">
-  <article class="hentry">
+  <article class="hentry{% if withtoc %} entry-with-toc{% endif %}">
     {% if page.image.feature %}<img src="{{ site.url }}/images/{{ page.image.feature }}" class="entry-feature-image" alt="{{ page.title }}" {% if site.logo == null %}style="margin-top:0;"{% endif %}>{% if page.image.credit %}<p class="image-credit">Image credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></p>{% endif %}{% endif %}
     <div class="entry-wrapper">
       <header class="entry-header">
@@ -20,19 +21,19 @@
           {% for tag in page.tags %}<li><a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}">{{ tag }}</a></li>{% endfor %}
         </ul>
         {% if page.link %}
-          <h1 class="entry-title"><a href="{{ page.link }}">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %} <span class="link-arrow">&rarr;</span></a></h1>
+          <h1 class="entry-title" id="title"><a href="{{ page.link }}">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %} <span class="link-arrow">&rarr;</span></a></h1>
         {% else %}
-          <h1 class="entry-title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
+          <h1 class="entry-title" id="title">{% if page.headline %}{{ page.headline }}{% else %}{{ page.title }}{% endif %}</h1>
         {% endif %}
       </header>
-      <footer class="entry-meta">
+      <footer class="{% if withtoc %}entry-meta{% else %}entry-meta-without-toc{% endif %}">
         {% if page.author %}
           {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
         {% endif %}
         {% if author.avatar contains 'http' %}
-          <img src="{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+          <img src="{{ author.avatar }}" class="{% if withtoc %}bio-photo{% else %}bio-photo without-toc{% endif %}" alt="{{ author.name }} bio photo"></a>
         {% elsif author.avatar %}
-          <img src="{{ site.url }}/images/{{ author.avatar }}" class="bio-photo" alt="{{ author.name }} bio photo"></a>
+          <img src="{{ site.url }}/images/{{ author.avatar }}" class="{% if withtoc %}bio-photo{% else %}bio-photo without-toc{% endif %}" alt="{{ author.name }} bio photo"></a>
         {% endif %}
         <span class="author vcard">By <span class="fn">{{ author.name }}</span></span>
         
@@ -45,7 +46,7 @@
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
         {% if page.share %}{% include social-share.html %}{% endif %}
       </footer>
-      <div class="entry-content">
+      <div class="{% if withtoc %}entry-content{% else %}entry-content without-toc{% endif %}">
         {{ content }}
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}
           <div id="disqus_thread"></div><!-- /#disqus_thread -->
@@ -66,7 +67,7 @@
   </article>
 </div><!-- /#main -->
 
-<div class="footer-wrapper">
+<div class="footer-wrapper{% if withtoc %} entry-with-toc{% endif %}">
   <footer role="contentinfo" class="entry-wrapper">
     {% include footer.html %}
   </footer>
