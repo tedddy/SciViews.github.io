@@ -5,6 +5,7 @@ excerpt: "Tcl/Tk is integrated with R (package tcltk). Here is how to use it..."
 author: james_and_philippe
 modified: 2015-11-25
 categories: [recipes, tcltk]
+section: "Recipes"
 tags: [tcltk, tcltk2, GUI, programming]
 image:
   feature: banner-tcltk.png
