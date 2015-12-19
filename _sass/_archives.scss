@@ -3,8 +3,6 @@
    ========================================================================== */
 
 
-
-
 /*
    Post archive
    ========================================================================== */
@@ -29,7 +27,6 @@
   .entry-date {
     @include font-size(12,no);
     color: lighten($text-color, 30);
-    /*text-transform: uppercase;*/
     display: none;
     @include media($medium) {
       display: inline;

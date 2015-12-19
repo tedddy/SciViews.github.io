@@ -1,6 +1,6 @@
 # SciViews web site
 
-This is the SciViews website. Go to [http://www.sciviews.org](http://www.sciviews.org) to reach it.
+This is the SciViews website R Markdown/Knitr/Jekyll generator. Go to [http://www.sciviews.org](http://www.sciviews.org) to reach it.
 
 To compile this site, you should use **knitr** and **servr** R packages from [CRAN](http://cran.r-project.org):
 

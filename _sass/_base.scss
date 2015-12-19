@@ -3,28 +3,6 @@
    ========================================================================== */
 
 /*
-   Make sure links to bookmark scroll the page enough when top toolbar is fixed
-   ========================================================================== */
-
-:target {
-  z-index: -1; // To avoid covering elements above the target
-  padding-top: 20px;
-  margin-top: -20px;
-  @include media($medium) {
-    padding-top: 55px;
-    margin-top: -55px;
-  }
-}
-
-// Not setting this changes layout... but setting this for ol > li results
-// in the target item missing numbering!
-:not(li):target {
-  display: inline-block;
-  position: relative;
-}
-
-
-/*
    Selections
    ========================================================================== */
 
@@ -69,7 +47,7 @@ li {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $heading-font;
-  text-rendering: optimizeLegibility; // Fix the character spacing for headings
+  text-rendering: optimizeLegibility; /* Fix character spacing for headings */
 }
 h1 {
   @include font-size(26);
@@ -121,6 +99,25 @@ a {
   }
 }
 
+/* Ensure to scroll the page enough to show target when top toolbar is fixed */
+
+:target {
+  z-index: -1; /* Avoid covering elements above the target */
+  padding-top: 20px;
+  margin-top: -20px;
+  @include media($medium) {
+    padding-top: 55px;
+    margin-top: -55px;
+  }
+}
+/* Not setting this changes layout... but setting this for ol > li results
+   in the target item missing numbering! Hence, the special case */
+
+:not(li):target {
+  display: inline-block;
+  position: relative;
+}
+
 /*
    Horizontal rules
    ========================================================================== */
@@ -167,7 +164,7 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-// Figure captions
+/* Figure captions */
 
 figcaption {
   padding-top: 10px;
@@ -176,16 +173,17 @@ figcaption {
   color: lighten($text-color, 30);
 }
 
+/*
+   Tables
+   ========================================================================== */
 
-// Tables
-// --------------------------------------------------
 table {
   width: 100%;
 }
 
-
-// Blockquotes
-// --------------------------------------------------
+/*
+   Blockquotes
+   ========================================================================== */
 
 blockquote {
   font-family: $alt-font;
@@ -195,9 +193,9 @@ blockquote {
   border-left: 6px solid $border-color;
 }
 
-
-// Code
-// --------------------------------------------------
+/*
+   Code
+   ========================================================================== */
 
 tt, code, kbd, samp, pre {
   font-family: $code-font;
@@ -220,9 +218,9 @@ pre {
   overflow-x: auto;
 }
 
-
-// Global Transition
-// ---------------------------------------------------
+/*
+   Global transitions
+   ========================================================================== */
 
 b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a, .highlight {
   @include transition(all .2s ease);

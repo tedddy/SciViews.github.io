@@ -115,18 +115,17 @@
   }
   ul ul.toc {
     @include media($large) {
-        @include rounded(0);
-        display: block;
-        float: left;
-        position: fixed;
-        overflow-y: scroll;
-        left: 0;
-        top: 0;
-        width: $left-pane;
-        height: 100%;
-        /*padding-top: 50px;*/
-        margin-top: 40px;
-        z-index: -1;
+      @include rounded(0);
+      display: block;
+      float: left;
+      position: fixed;
+      overflow-y: scroll;
+      left: 0;
+      top: 0;
+      width: $left-pane;
+      height: 100%;
+      margin-top: 40px;
+      z-index: -1;
     }
   }
   ul ul li {
@@ -185,6 +184,7 @@
 }
 
 /* display when JavaScript is disabled */
+
 .no-js #site-nav {
   display: block;
 }
