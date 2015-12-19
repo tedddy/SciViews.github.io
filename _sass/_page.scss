@@ -58,8 +58,8 @@
     @include font-size(12);
     padding: 0 5px;
     &:hover {
-      background-color: $black;
-      color: $white;
+      background-color: $menu-bg-color;
+      color: $menu-color;
     }
   }
   li {
@@ -95,7 +95,7 @@ span + .entry-title {
   font-weight: 500;
   line-height: 1;
   a {
-    color: $black;
+    color: $menu-bg-color;
     text-decoration: underline;
   }
   @include media($medium) {
@@ -124,6 +124,9 @@ span + .entry-title {
   @include font-size(12);
   a {
     color: lighten($text-color, 30);
+    &:hover {
+      color: $menu-bg-color;
+    }
   }
   & > span {
     padding: 0 20px 10px 0;
@@ -137,6 +140,9 @@ span + .entry-title {
   @include font-size(12);
   a {
     color: lighten($text-color, 30);
+    &:hover {
+      color: $menu-bg-color;
+    }
   }
   @include media($large) {
     @include span-columns(2.5);
