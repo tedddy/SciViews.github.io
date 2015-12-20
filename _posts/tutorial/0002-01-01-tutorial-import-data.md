@@ -9,8 +9,8 @@ section: "Learning SciViews"
 tags: [import, csv, Excel]
 image:
   feature: banner-computer.jpg
-  credit: 
-  creditlink: 
+  credit: pixabay
+  creditlink: https://pixabay.com
   teaser: banner-computer.jpg
 comments: true
 share: true

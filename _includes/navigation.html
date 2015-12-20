@@ -29,23 +29,25 @@
     {% if prev_post %}
       <li class="nav-left"><a href="{{ site.url }}{{ prev_post }}#title" title="Previous page: {{ prev_post_title }}"><i class="fa fa-chevron-left"></i></a></li>
     {% endif %}
-
-      <li class="nav-left"><a href="" title="Up"><i class="fa fa-chevron-up"></i></a>
-      {% if pagetoc %}
-        <!-- Category-specific TOC-->
-        {% assign section = "none" %}
+    {% assign pageurl = page.url | replace_first: '/', '' %}
+    {% if pageurl contains '/' %}
+      <li class="nav-left"><a href="{% if page.categories[1] %}../..{% else %}..{% endif %}" title="Up"><i class="fa fa-chevron-up"></i></a>
+    {% endif %}
+    {% if pagetoc %}
+      <!-- Category-specific TOC-->
+      {% assign section = "none" %}
         <ul class="toc">
-        {% for post in site.categories[pagetoc] reversed %}
-          {% if post.section != "" %}
-            {% if post.section != section %}
-              <span>{{ post.section }}</span>
-              {% assign section = post.section %}
-            {% endif %}
+      {% for post in site.categories[pagetoc] reversed %}
+        {% if post.section != "" %}
+          {% if post.section != section %}
+            <span>{{ post.section }}</span>
+            {% assign section = post.section %}
           {% endif %}
+        {% endif %}
           <li><a href="{{ site.url }}{{ post.url }}#title"{% if post.url == page.url %} class="current"{% endif %}>{{ post.title }}</a></li>
-        {% endfor %}
+      {% endfor %}
         </ul>
-      {% endif %}
+    {% endif %}
       </li>
 
     {% if next_post %}

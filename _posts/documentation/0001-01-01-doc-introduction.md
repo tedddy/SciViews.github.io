@@ -9,8 +9,8 @@ section: "Mastering SciViews"
 tags: [R, SciViews, R Studio]
 image:
   feature: banner-enter.jpg
-  credit: 
-  creditlink: 
+  credit: pixabay
+  creditlink: https://pixabay.com
   teaser: banner-enter.jpg
 comments: true
 share: true

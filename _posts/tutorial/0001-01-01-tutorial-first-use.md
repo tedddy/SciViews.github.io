@@ -9,8 +9,8 @@ section: "Learning SciViews"
 tags: [R, R Studio]
 image:
   feature: banner-computer.jpg
-  credit: 
-  creditlink: 
+  credit: pixabay
+  creditlink: https://pixabay.com
   teaser: banner-computer.jpg
 comments: true
 share: true
