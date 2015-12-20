@@ -4,7 +4,7 @@ title: Installing SciViews
 excerpt: "Install the SciViews Box, R packages, or editor features."
 modified: 2015-11-22
 image:
-  feature: banner-keyboard.jpg
+  feature: banner-usb.jpg
   credit: pixabay
   creditlink: https://pixabay.com
 ---
