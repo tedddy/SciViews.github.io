@@ -38,21 +38,8 @@ tkgrid(but)
 # eases the exchanges between R and Tcl, through strings.
 # But R does not accepts \0 inside strings => show how to overcome this!
 ```
----
 
-{% assign section = "none" %}
-{% for post in site.categories.tcltk reversed %}
-  {% assign year = post.date | date: "%Y" | plus: 0 %}
-  {% if year > 0 %}
-    {% if post.section != "" %}
-      {% if post.section != section %}
-<h2>{{ post.section }}</h2>
-        {% assign section = post.section %}
-      {% endif %}
-    {% endif %}
-  <li><article><a href="{{ site.url }}{{ post.url }}"><b>{{ post.title }}</b> {% if post.excerpt %} <span class="excerpt"><br/>{{ post.excerpt }}</span>{% endif %}</a></article></li>
-  {% endif %}
-{% endfor %}
+{% include toc.html %}
 
 * The color-selection widget
 * Displaying images in Tk windows
