@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 5px;
+  height: 0; /*5px;*/
   background-color: $menu-bg-color;
 }
 
@@ -32,11 +32,20 @@
     margin: 0 0 50px;
     padding: 4px 20px;
     background-color: $menu-bg-color;
+    color: $menu-color;
     @include media($medium) {
       position: fixed;
       width: 94%;
       left: 3%;
       @include rounded(0 0 10px 10px);
+      background-color: lighten($menu-bg-color, 85);
+      color: darken($menu-color, 20);
+      -o-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -khtml-transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      transition: all 0.3s linear;
     }
     @include clearfix;
     &.with-toc {
@@ -47,6 +56,10 @@
         @include rounded(0 0 10px 0);
       }
     }
+    &:hover {
+      background-color: $menu-bg-color;
+      color: $menu-color;
+    }
   }
   li {
     display: block;
@@ -55,7 +68,7 @@
     text-align: center;
     @include font-size(13,no);
     text-transform: uppercase;
-    color: $menu-color;
+    color: inherit;
     @include media($medium) {
       @include font-size(14,no);
     }
@@ -73,11 +86,12 @@
     display: block;
     margin-bottom: 10px;
     padding: 12px 20px;
+    color: $menu-color;
     @include media($medium) {
       margin-bottom: 0;
       padding: 6px 10px;
+      color: inherit;
     }
-    color: $menu-color;
     @include rounded(4px);
     &:hover {
       background-color: lighten($menu-bg-color, 10);
@@ -88,7 +102,9 @@
     }
   }
   a.disabled {
+    display: none;
     @include media($large) {
+      display: block;
       min-width: 125px;
     }
   }
@@ -111,21 +127,29 @@
       padding-left: 10px;
       padding-right: 10px;
       padding-bottom: 10px;
+      @include rounded(0 0 4px 4px);
+      box-shadow: 2px 2px 5px grey;
     }
   }
   ul ul.toc {
     @include media($large) {
       @include rounded(0);
+      box-shadow: none;
       display: block;
       float: left;
       position: fixed;
       overflow-y: scroll;
+      background-color: inherit;
       left: 0;
       top: 0;
       width: $left-pane;
       height: 100%;
       margin-top: 40px;
       z-index: -1;
+    }
+    &:hover {
+      background-color: $menu-bg-color;
+      color: $menu-color;
     }
   }
   ul ul li {
@@ -144,7 +168,7 @@
     }
   }
   ul ul span {
-    color: lighten($menu-bg-color, 40);
+    color: lighten($menu-bg-color, 70);
   }
   ul li:hover > ul {
     @include media($medium) {

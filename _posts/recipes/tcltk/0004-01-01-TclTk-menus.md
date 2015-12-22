@@ -16,7 +16,7 @@ comments: true
 share: true
 ---
 
-## A Simple file menu
+### A Simple file menu
 
 The example below illustrates how to add a simple menu to a Tk toplevel window.
 
@@ -37,7 +37,7 @@ Running the code above gives the following window:
 ![Simple menu]({{ site.images }}/recipes-tcltk/menus.png)
 
 
-## Cascading menus within other menus
+### Cascading menus within other menus
 
 The example below illustrates how to cascade menu within another menu.
 
@@ -67,7 +67,7 @@ Running the code above gives the following window:
 ![Cascaded menu]({{ site.images }}/recipes-tcltk/menus2.png)
 
 
-## Adding a pop-up menu to a text window
+### Adding a pop-up menu to a text window
 
 The example below demonstrates how to add a simple pop-up menu to a text window. The hard part is determining the mouse coordinates in order to ensure that the menu appears where the mouse is right-clicked. Note that the keyboard shortcuts for copying and pasting (`<Ctrl-C>` and `<Ctrl-V>`) are mapped automatically for a Tk text widget.
 

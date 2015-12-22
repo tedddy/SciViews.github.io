@@ -16,7 +16,7 @@ comments: true
 share: true
 ---
 
-## An editable text window
+### An editable text window
 
 Here is a text area that completelly fills a Tk window.
 
@@ -56,7 +56,7 @@ You can freely edit, cut, copy and paste in the text area.
 ![text area]({{ site.images }}/recipes-tcltk/text.png)
 
 
-## A non-editable text window
+### A non-editable text window
 
 ```{r, eval=FALSE}
 win2  <- tktoplevel()
@@ -74,7 +74,7 @@ Here is what you get. Try editing the text.
 ![text read-only]({{ site.images }}/recipes-tcltk/text2.png)
 
 
-## A text window with a vertical scrollbar
+### A text window with a vertical scrollbar
 
 ```{r, eval=FALSE}
 win3  <- tktoplevel()
@@ -104,7 +104,7 @@ Scrolling down reveals the remaining contents of the text widget:
 ![text scrolled]({{ site.images }}/recipes-tcltk/text4.png)
 
 
-## A text window with horizontal and vertical scrollbars (and no word wrap)
+### A text window with horizontal and vertical scrollbars (and no word wrap)
 
 ```{r, eval=FALSE}
 win4  <- tktoplevel()

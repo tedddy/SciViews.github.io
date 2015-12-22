@@ -4,7 +4,7 @@ title:  "The SciViews Box for reproductible science"
 excerpt: "The SciViews Box is a virtual machine preinstalled with a version of R and a series of CRAN packages from a fixed date (plus R Studio server and Jupyter)."
 modified: 2015-12-21
 categories: blog
-tags: [reproductibe research, virtual machine, R, R Studio, Jupyter]
+tags: [reproductible research, virtual machine, R, R Studio, Jupyter]
 image:
   feature: banner-web.jpg
   credit: Julien Eichinger (fotolia)

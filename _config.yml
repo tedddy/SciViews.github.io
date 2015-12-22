@@ -6,6 +6,7 @@ logo: site-title.png
 search: true
 #url: http://www.sciviews.org
 images: https://dl.dropboxusercontent.com/u/19371999/jekyll
+localimages: ~/Dropbox/Public/jekyll/
 
 # Define this to use tiles instead of a list in the homepage
 teaser: site-teaser.png

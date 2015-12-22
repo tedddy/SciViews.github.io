@@ -1,7 +1,7 @@
 <div class="navigation-top"></div>
 <div class="navigation-wrapper">
   <nav role="navigation" id="site-nav"> <!--</nav> class="animated drop">-->
-    <ul{% if pagetoc %} class="with-toc"{% endif %}>
+    <ul class="animated fadeIn{% if pagetoc %} with-toc{% endif %}">
     <!-- compute the TOC in the current category -->
     {% if pagetoc %}
       {% assign categories_posts = site.categories[pagetoc] %}

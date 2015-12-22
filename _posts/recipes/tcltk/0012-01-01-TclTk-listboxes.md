@@ -18,7 +18,7 @@ share: true
 
 The following examples illustrate how to use a list box in a Tk window. The first example does not have a scrollbar, so it is simpler.
 
-## List box with tk2listbox()
+### List box with tk2listbox()
 
 
 {% highlight r %}
@@ -58,7 +58,7 @@ The user can then select their favorite fruit with the mouse:
 The `tk2listbox()` function automatically adds a scrollbar. With the **tcltk** version (`tklistbox()`), you have to add it manually yourself and it requires much more code for the same result. The `tk2listbox()` function also eases the initial filling of the list and the preselection of items, as it will be done in the second example here under.
 
 
-## Prefilling of a list and deletion of items from a list
+### Prefilling of a list and deletion of items from a list
 
 Here is a multiple selection list that is prefilled:
 

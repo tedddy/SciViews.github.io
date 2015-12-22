@@ -55,7 +55,7 @@ Our Tk window and the way we manage it is indeed far from optimal. It can be ame
 
 [^3]: Rerun the previous code to recreate the window and the button. Do not close that window, but rerun `win1 <- tktoplevel()`. This will create a new window, as `win1`. Now, when you click the `OK` button on the _first_ window, it is the _second_ window that is destroyed!
 
-## A better approach
+### A better approach
 
 Here is an improved version that implements all four points raised here above:
 
@@ -83,7 +83,7 @@ The button has now much more space around it. On Windows, it looks native, but o
 
 Our code is now becoming quite complicated. However, the **tcltk2** package would be helpful here.
 
-## The tcltk2 version
+### The tcltk2 version
 
 The **tcltk2** R package[^4] provides more advanced Tk widgets, additional R-Tcl commands, more modern themes for Linux and Mac OS X and it simplifies the creation of GUI items. Here is how you could get the same window using **tcltk2**:
 

@@ -16,7 +16,7 @@ comments: true
 share: true
 ---
 
-## The Open file dialog
+### The Open file dialog
 
 ```{r, eval=FALSE}
 library(tcltk2)
@@ -35,7 +35,7 @@ The code above produces the following window:
 ![Messagebox]({{ site.images }}/recipes-tcltk/opensavebox2.png)
 
 
-## The Save file dialog
+### The Save file dialog
 
 ```{r, eval=FALSE}
 filename <- tclvalue(tkgetSaveFile())
@@ -55,7 +55,7 @@ Now we will assume that the user pressed `Cancel`:
 ![Messagebox]({{ site.images }}/recipes-tcltk/opensavebox4.png)
 
 
-## Opening CSV files with the open file dialog
+### Opening CSV files with the open file dialog
 
 Here is how you can specify to the **OpenFile** dialog the type of files to look for:
 
@@ -83,7 +83,7 @@ Pressing the button gives the following **OpenFile** dialog, which knows which f
 ![Open a csv file box]({{ site.images }}/recipes-tcltk/opensavebox6.png)
 
 
-## Saving (or opening) files with more than one possible extension
+### Saving (or opening) files with more than one possible extension
 
 Multiple possibilities for file extensions (e.g., `.jpg` and `.jpeg`) can be separated by a space as follows:
 
