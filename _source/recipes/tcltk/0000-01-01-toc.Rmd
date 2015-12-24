@@ -41,21 +41,6 @@ tkgrid(but)
 
 {% include toc.html %}
 
-* The color-selection widget
-* Displaying images in Tk windows
-* Using the Tk table widget
-* Using the tree (drill-down) widget
-* The date entry and calendar widgets
-* The tabbed notebook widget
-* The scrollable frame 
-
-## Advanced tcltk coding
-
-* Specifying the layout
-* Specifying which window is active (focused)
-* Fonts
-* Binding events (e.g. a key-press) to functions and generating events
-* The wait cursor and other cursors
 * Exception handling
 * Evaluating R code from a text window (a scripting widget)
 * Plotting graphs with tkrplot
