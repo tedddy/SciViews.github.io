@@ -36,4 +36,3 @@ For an example of generating an event, see the `Pop-up Menu` example in which th
 | `a`| The user typed an "a". Most printable characters can be used as is. The exceptions are space (`<space>`) and less than (`<less>`). Note that `1` is a keyboard binding, while `<1>` is a button binding. |
 | `<Shift-Up>`| The user pressed the Up arrow, while holding the Shift key pressed. You can use prefixes like `Alt`, `Shift`, and `Control`. |
 | `<Configure>` | The widget changed size (or location, on some platforms). The new size is provided in the width and height attributes of the event object passed to the callback. |
-{: .table}

@@ -66,3 +66,5 @@ tkgrid(but)
 5. Read and participate in [R-Help](https://www.r-project.org/mail.html) and other R mailing lists.
 
 6. Search the web for Tcl/Tk examples, and don't ignore them completely if they use a language other than R, e.g. Perl or Python. A lot can be learned from these examples.
+
+<a markdown="0" href="{{ site.images }}/recipes-tcltk/Rtcltk.pdf" class="btn" target="_self"><i class="fa fa-file-pdf-o"></i> Get PDF version</a>
