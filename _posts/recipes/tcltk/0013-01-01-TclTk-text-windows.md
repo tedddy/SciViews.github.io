@@ -137,3 +137,40 @@ tkfocus(win4$env$txt)
 Scrolling across reveals the remaining contents of the text widget: 
 
 ![text double-scroll scrolled]({{ site.images }}/recipes-tcltk/text6.png)
+
+
+### Entering Unicode characters in text windows
+
+You can call a dialog box to enter Unicode characters from within R with the **tcltk2** function `tk2unicode_select()` function:
+
+
+{% highlight r %}
+win5 <- tktoplevel()
+win5$env$txt <- tk2text(win5, width = 60, height = 10)
+tkpack(win5$env$txt, fill = "both", expand = TRUE)
+# Call the Unicode dialog box
+tk2unicode_select(win5$env$txt)
+{% endhighlight %}
+
+You should see the following dialog box:
+
+![unicode dialog box]({{ site.images }}/recipes-tcltk/text7.png)
+
+Naviguate through code pages, then select the character you want by double-click or by hitting `Enter`. The character is inserted into the target widget. Now, don't close the window yet. It is also possible to define a _compose key_ (`Cmp`), that is, a key to trigger a sequence of two keys to be combined into a special unicode character. Of course, you can freely choose the compose key and the sequences you want to use. Obvious sequences are: `Cmp + ^ + e` → ê, `Cmp + a + e` → æ, etc. But you can also define other combinations like `Cmp + O + C` → ©, or `Cmp + m + u` → µ. for instance. Also, hitting the compose key twice brings back the Unicode selector. Here is how you can configure your `tk2text` text widget (or a `tk2entry` entry widget) to use the key composer:
+
+
+{% highlight r %}
+## Bind the key composer with our text widget
+tk2unicode_bind(win5$env$txt)
+
+## Call the key composer configuration dialog box
+tk2unicode_config(win5)
+{% endhighlight %}
+
+Here is the key composer configuration dialog box (as you can see, it is called "Khim"):
+
+![unicode configuration dialog box]({{ site.images }}/recipes-tcltk/text8.png)
+
+You have the opportunity to save your configuration on disk. If you do so, it will persist from session to session.
+
+![save configuration dialog box]({{ site.images }}/recipes-tcltk/text9.png)

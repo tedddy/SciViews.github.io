@@ -1,6 +1,6 @@
 --- 
 title: "R Tcl/Tk recipes"
-author: "Philippe Grosjean & James Wettenhall"
+author: "James Wettenhall & Philippe Grosjean"
 date: "`r Sys.Date()`"
 knit: "bookdown::render_book"
 output:
@@ -37,7 +37,7 @@ link-citations: yes
 \node[anchor=north west,inner sep=0pt] at (0,0) {\includegraphics[width=\paperwidth]{front-cover}};
 \draw[anchor=north] (midpoint) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering R Tcl/Tk Recipes\\[15pt]
 {\Large GUI for R using tcltk2}\\[20pt]
-{\huge Philippe Grosjean \& James Wettenhall}}};
+{\huge James Wettenhall \& Philippe Grosjean}}};
 \end{tikzpicture}};
 \end{tikzpicture}
 \vfill
@@ -49,7 +49,7 @@ link-citations: yes
 .\vfill
 \thispagestyle{empty}
 
-\noindent Copyright \copyright\ 2015, Philippe Grosjean \& James Wettenhall
+\noindent Copyright \copyright\ 2015, James Wettenhall \& Philippe Grosjean
 
 \noindent \textsc{phgrosjean@sciviews.org}
 
