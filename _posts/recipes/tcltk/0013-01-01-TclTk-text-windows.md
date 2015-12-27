@@ -156,7 +156,7 @@ You should see the following dialog box:
 
 ![unicode dialog box]({{ site.images }}/recipes-tcltk/text7.png)
 
-Naviguate through code pages, then select the character you want by double-click or by hitting `Enter`. The character is inserted into the target widget. Now, don't close the window yet. It is also possible to define a _compose key_ (`Cmp`), that is, a key to trigger a sequence of two keys to be combined into a special unicode character. Of course, you can freely choose the compose key and the sequences you want to use. Obvious sequences are: `Cmp + ^ + e` → ê, `Cmp + a + e` → æ, etc. But you can also define other combinations like `Cmp + O + C` → ©, or `Cmp + m + u` → µ. for instance. Also, hitting the compose key twice brings back the Unicode selector. Here is how you can configure your `tk2text` text widget (or a `tk2entry` entry widget) to use the key composer:
+Naviguate through code pages, then select the character you want by double-click or by hitting `Enter`. The character is inserted into the target widget. Now, close the Unicode character selector, but don't close the text window yet. It is also possible to define a _compose key_ (`Cmp`), that is, a key to trigger a sequence of two keys to be combined into a special unicode character. Of course, you can freely choose the compose key and the sequences you want to use. Obvious sequences are: `Cmp + ^ + e` → ê, `Cmp + a + e` → æ, etc. But you can also define other combinations like `Cmp + O + C` → ©, or `Cmp + m + u` → µ. for instance. Also, hitting the compose key twice brings back the Unicode selector. Here is how you can configure your `tk2text` text widget (or a `tk2entry` entry widget) to use the key composer:
 
 
 {% highlight r %}
