@@ -38,7 +38,7 @@
       width: 94%;
       left: 3%;
       @include rounded(0 0 10px 10px);
-      background-color: lighten($menu-bg-color, 85);
+      background-color: $menu-bg-color;
       color: darken($menu-color, 20);
       -o-transition: all 0.3s linear;
       -moz-transition: all 0.3s linear;
@@ -57,7 +57,7 @@
       }
     }
     &:hover {
-      background-color: $menu-bg-color;
+      background-color: darken($menu-bg-color, 10);
       color: $menu-color;
     }
   }
@@ -139,7 +139,8 @@
       float: left;
       position: fixed;
       overflow-y: scroll;
-      background-color: inherit;
+      background-color: darken($menu-color, 10); /*inherit;*/
+      color: lighten($menu-bg-color, 10);
       left: 0;
       top: 0;
       width: $left-pane;
@@ -148,9 +149,16 @@
       z-index: -1;
     }
     &:hover {
-      background-color: $menu-bg-color;
+      background-color: darken($menu-bg-color, 10);
       color: $menu-color;
+      @include media($large) {
+        background-color: darken($menu-color, 10);
+        color: lighten($menu-bg-color, 10);
+      }
     }
+  }
+  ul ul.toc a:hover {
+    color: $menu-color;
   }
   ul ul li {
     float: none;
@@ -168,7 +176,7 @@
     }
   }
   ul ul span {
-    color: lighten($menu-bg-color, 70);
+    color: lighten($menu-bg-color, 30); /*50*/
   }
   ul li:hover > ul {
     @include media($medium) {

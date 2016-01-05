@@ -1,7 +1,7 @@
 # Site wide configuration
 title: SciViews
 locale: en_US
-description:  Open source software for the R language and environment.
+description: Open source software for the R language and environment.
 logo: site-title.png
 search: true
 #url: http://www.sciviews.org
