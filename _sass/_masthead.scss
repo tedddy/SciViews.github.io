@@ -65,7 +65,7 @@
   @include font-size(14);
   font-weight: 400;
   font-style: italic;
-  color: lighten($text-color, 30);
+  color: $meta-color;
   @include animation-duration(1s);
     @include animation-delay(1s);
   @include media($medium) {

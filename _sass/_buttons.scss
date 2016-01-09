@@ -9,7 +9,8 @@
 .btn {
   display: inline-block;
   margin-bottom: 20px;
-  padding: 8px 20px;
+  padding: 5px 20px;
+  min-width: 125px;
   @include font-size(14);
   background-color: $menu-bg-color;
   color: $menu-color;
@@ -23,6 +24,17 @@
     color: $menu-bg-color;
   }
 }
+
+.left-btn {
+  margin-left: $gutter;
+  float: left;
+}
+
+.right-btn {
+  margin-right: $gutter;
+  float: right;
+}
+
 
 /*
    Close button

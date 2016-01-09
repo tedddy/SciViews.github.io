@@ -54,12 +54,12 @@
   @include font-size(12);
   font-weight: 400;	
   a {
-    color: lighten($text-color, 30);
+    color: $meta-color;
+    /* color: $link-color; */
     @include font-size(12);
     padding: 0 5px;
     &:hover {
-      background-color: $menu-bg-color;
-      color: $menu-color;
+      color: $menu-bg-color;
     }
   }
   li {
@@ -96,7 +96,7 @@ span + .entry-title {
   line-height: 1;
   a {
     color: $menu-bg-color;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
   }
   @include media($medium) {
     @include font-size(30,yes,30);
@@ -123,7 +123,7 @@ span + .entry-title {
   @include span-columns(12);
   @include font-size(12);
   a {
-    color: lighten($text-color, 30);
+    color: $meta-color;
     &:hover {
       color: $menu-bg-color;
     }
@@ -139,7 +139,7 @@ span + .entry-title {
   @include span-columns(12);
   @include font-size(12);
   a {
-    color: lighten($text-color, 30);
+    color: $meta-color;
     &:hover {
       color: $menu-bg-color;
     }
@@ -161,12 +161,11 @@ span + .entry-title {
 
 /* tiles */
 
-.tile{
+.tile {
   width:33%;
-  height:300px;
+  height:280px;
   float:left;
-  padding-left:1%;
-  padding-right:1%;
+  position: relative;
   font-size:80%;
   background-color: lighten($black, 95);
   border-width: 5px;
@@ -175,10 +174,33 @@ span + .entry-title {
   border-style: solid;
 }
 
-.tile-excerpt{
+.tile-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.tile-title {
+  margin-top: 10px;
+  padding-left:3%;
+  padding-right:3%;
+}
+
+.tile-excerpt {
+  padding-left:3%;
+  padding-right:3%;
   display: block;
   float: none;
-  @include font-size(13, no, 14);
+  @include font-size(13, no, 13);
+}
+
+.tile-link {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  @include font-size(16, no, 16);
+  color: $meta-color;
+  &:hover {
+    color: $menu-bg-color;
+  }
 }
 
 /* author avatar (circular) */
@@ -208,7 +230,7 @@ span + .entry-title {
   text-align: right;
   @include font-size(12, no);
   line-height: 1.3;
-  color: lighten($text-color, 30);
+  color: $meta-color;
   @include clearfix();
   @include media($medium) {
     max-width: 760px;
@@ -220,7 +242,7 @@ span + .entry-title {
     max-width: 960px;
   }
   a {
-    color: lighten($text-color, 30);
+    color: $link-color;
   }
 }
 
@@ -241,10 +263,10 @@ span + .entry-title {
   
   p > a,
   li > a {
-    border-bottom: 1px dotted lighten($link-color, 50);
+    /* border-bottom: 1px dotted lighten($link-color, 50);
     &:hover {
       border-bottom-style: solid;
-    }
+    } */
   }
 }
 

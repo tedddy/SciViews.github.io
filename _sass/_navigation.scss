@@ -39,7 +39,6 @@
       left: 3%;
       @include rounded(0 0 10px 10px);
       background-color: $menu-bg-color;
-      /*color: darken($menu-color, 20);*/
       color: $menu-color;
       -o-transition: all 0.3s linear;
       -moz-transition: all 0.3s linear;
@@ -89,17 +88,15 @@
     padding: 12px 20px;
     color: $menu-color;
     @include media($medium) {
-      margin-bottom: 0;
-      padding: 6px 10px;
+      /* margin-bottom: 0; */
+      margin: 2px;
+      padding: 3px 8px;
       color: inherit;
     }
-    @include rounded(4px);
+    @include rounded(3px);
     &:hover {
-      /* Make hover and current same style! */
-      /*background-color: lighten($menu-bg-color, 10);*/
       background-color: $menu-color;
       color: $menu-bg-color;
-      
     }
     &.current{
       background-color: $menu-color;
@@ -115,6 +112,7 @@
   }
   a.disabled:hover {
     background-color: $menu-bg-color;
+    color: $menu-color;
     @include box-shadow($shadow: inset 0 0 1px $menu-bg-color); 
   }  
   ul ul {
@@ -145,13 +143,14 @@
       float: left;
       position: fixed;
       overflow-y: auto;
-      background-color: darken($menu-color, 10); /*inherit;*/
-      color: lighten($menu-bg-color, 10);
+      background-color: $box-color;
+      border: $box-border;
+      color: $menu-bg-color; /*lighten($menu-bg-color, 10);*/
       left: 0;
       top: 0;
       width: $left-pane;
       height: 100%;
-      margin-top: 40px;
+      margin-top: 38px;
       padding-top: 15px;
       z-index: -1;
     }
@@ -159,11 +158,12 @@
       margin-bottom: 30px;
     }
     &:hover {
-      background-color: darken($menu-bg-color, 10);
+      /*background-color: darken($menu-bg-color, 10);*/
+      background-color: $menu-bg-color;
       color: $menu-color;
       @include media($large) {
         background-color: darken($menu-color, 10);
-        color: lighten($menu-bg-color, 10);
+        color: $menu-bg-color; /*lighten($menu-bg-color, 10);*/
       }
     }
   }
@@ -187,7 +187,7 @@
     }
   }
   ul ul span {
-    color: lighten($menu-bg-color, 30); /*50*/
+    color: lighten($menu-bg-color, 40); /*50*/
   }
   ul li:hover > ul {
     @include media($medium) {

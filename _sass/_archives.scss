@@ -26,7 +26,7 @@
   }
   .entry-date {
     @include font-size(12,no);
-    color: lighten($text-color, 30);
+    color: $meta-color;
     display: none;
     @include media($medium) {
       display: inline;

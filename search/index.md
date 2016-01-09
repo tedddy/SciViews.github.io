@@ -11,13 +11,24 @@ sitemap: false
 ---
   
 <!-- Search form -->
-<form method="get" action="{{ site.url }}/search/" data-search-form
+<form name="search" method="get" action="{{ site.url }}/search/" data-search-form
 class="simple-search">
   <label for="q">Search {{ site.title }} titles for:</label>
   <input type="search" name="q" id="q" placeholder="What are you looking for?"
     data-search-input id="goog-wm-qt" autofocus />
-  <input type="submit" value="Search Titles" id="goog-wm-sb" />
+  <input type="hidden" name="sitesearch" value="{{ site.url }}" />
+  <input type="submit" value="Titles Only" id="goog-wm-sb" />
+  <input type="button" value="With Google" id="goog-wm-sb2" />
 </form>
+
+<script type="text/javascript">
+document.getElementById('goog-wm-sb2').onclick = function() {
+  document.search.action = 'http://www.google.com/search';
+  document.search.submit();
+}
+
+</script>
+
 
 <!-- Search results placeholder -->
 <h6 data-search-found>
@@ -32,17 +43,6 @@ class="simple-search">
     <a href="##Url##"><b>##Title##</b> <span class="excerpt">##Excerpt##</span></a>
   </article></li>
 </script>
-
-<!-- Search with Google or look at tags -->
-<div class="simple-search">
-  <script type="text/javascript">
-    var GOOG_FIXURL_LANG = 'en';
-    var GOOG_FIXURL_SITE = '{{ site.url }}'
-  </script>
-  <script type="text/javascript"
-    src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
-  </script>
-</div>
 
 <div class="simple-search">
   Or search by

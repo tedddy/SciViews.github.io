@@ -25,7 +25,7 @@
     <div class="entry-wrapper">
       <header class="entry-header">
         <ul class="entry-tags">
-          {% if page.tags %}<i class="fa fa-tags"></i> Tags{% endif %}
+          <a href="{{ site.url }}/tags/" title="All tags"><i class="fa fa-tags"></i> {% if page.tags %}Tags{% else %}Tags (none for this page){% endif %}</a>
           {% for tag in page.tags %}<li><a href="{{ site.url }}/tags/#{{ tag }}" title="Pages tagged {{ tag }}">{{ tag }}</a></li>{% endfor %}
         </ul>
         {% if page.link %}
@@ -49,7 +49,7 @@
         <span class="entry-date date published"><time datetime="{{ page.date | date_to_xmlschema }}"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%B %d, %Y" }}</time></span>
         {% endif %}
         
-        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-pencil"></i> {{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
+        {% if page.modified %}<span class="entry-date date modified"><time datetime="{{ page.modified }}"><i class="fa fa-edit"></i> {{ page.modified | date: "%B %d, %Y" }}</time></span>{% endif %}
         {% if (site.owner.disqus-shortname and page.comments) or site.comments %}<span class="entry-comments"><i class="fa fa-comment-o"></i> <a href="#disqus_thread">Comment</a></span>{% endif %}
         {% if page.share %}{% include social-share.html %}{% endif %}
       </footer>
@@ -62,11 +62,22 @@
       </div><!-- /.entry-content -->
     </div><!-- /.entry-wrapper -->
     <nav class="pagination" role="navigation">
-      {% if prev_post %}
-        <a href="{{ site.url }}{{ prev_post }}" class="btn" title="{{ prev_post_title }}"><i class="fa fa-chevron-left"></i> Prev</a>
-      {% endif %}
-      {% if next_post %}
-        <a href="{{ site.url }}{{ next_post }}" class="btn" title="{{ next_post_title }}">Next <i class="fa fa-chevron-right"></i></a>
+      {% if pageyear < 2000 %}
+        <!-- This is an article or book/chapter component-->
+        {% if prev_post %}
+          <a href="{{ site.url }}{{ prev_post }}" class="btn left-btn" title="{{ prev_post_title }}"><i class="fa fa-arrow-left"></i>&nbsp; PREVIOUS</a>
+        {% endif %}
+        {% if next_post %}
+          <a href="{{ site.url }}{{ next_post }}" class="btn right-btn" title="{{ next_post_title }}">NEXT &nbsp;<i class="fa fa-arrow-right"></i></a>
+        {% endif %}
+      {% else %}
+        <!-- Navigation previous/next in blog-like pages is done in reversed order: newer item first -->
+        {% if next_post %}
+          <a href="{{ site.url }}{{ next_post }}" class="btn left-btn" title="{{ next_post_title }}"><i class="fa fa-arrow-left"></i>&nbsp; PREVIOUS</a>
+        {% endif %}
+        {% if prev_post %}
+          <a href="{{ site.url }}{{ prev_post }}" class="btn right-btn" title="{{ prev_post_title }}">NEXT &nbsp;<i class="fa fa-arrow-right"></i></a>
+        {% endif %}
       {% endif %}
     </nav><!-- /.pagination -->
   </article>
