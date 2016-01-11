@@ -3,7 +3,7 @@ layout: post
 title:  "List boxes in R TclTk"
 excerpt: "Create and populate list boxes with or without scrollbars in Tk."
 author: james_and_philippe
-modified: 2015-12-00
+modified: 2015-12-22
 categories: [recipes, tcltk]
 section: "Basic widgets"
 tags: [tcltk, GUI, programming]

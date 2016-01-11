@@ -81,6 +81,18 @@
     &.nav-right {
       float: right;
     }
+    &.menu{
+      display: none;
+      @include media($medium) {
+        display: block;
+      }
+      @include media($large) {
+        width: 0;
+        a {
+          color: $menu-bg-color;
+        }
+      }
+    }
   }
   a {
     display: block;
@@ -105,14 +117,20 @@
   }
   a.disabled {
     display: none;
-    @include media($large) {
+    @include media($medium) {
       display: block;
-      min-width: 125px;
+      color: lighten($menu-bg-color, 10);
+      pointer-events: none;
+    }
+    @include media($large) {
+      &.spacer {
+        min-width: 125px;
+      }
     }
   }
   a.disabled:hover {
     background-color: $menu-bg-color;
-    color: $menu-color;
+    color: lighten($menu-bg-color, 10);
     @include box-shadow($shadow: inset 0 0 1px $menu-bg-color); 
   }  
   ul ul {

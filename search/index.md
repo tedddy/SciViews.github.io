@@ -16,7 +16,7 @@ class="simple-search">
   <label for="q">Search {{ site.title }} titles for:</label>
   <input type="search" name="q" id="q" placeholder="What are you looking for?"
     data-search-input id="goog-wm-qt" autofocus />
-  <input type="hidden" name="sitesearch" value="{{ site.url }}" />
+  <input type="hidden" name="sitesearch" value="{{ site.searchurl }}" />
   <input type="submit" value="Titles Only" id="goog-wm-sb" />
   <input type="button" value="With Google" id="goog-wm-sb2" />
 </form>
@@ -28,7 +28,6 @@ document.getElementById('goog-wm-sb2').onclick = function() {
 }
 
 </script>
-
 
 <!-- Search results placeholder -->
 <h6 data-search-found>
@@ -45,7 +44,7 @@ document.getElementById('goog-wm-sb2').onclick = function() {
 </script>
 
 <div class="simple-search">
-  Or search by
-  <b><a href="../tags/" target="_self">tags</a></b>
+  You can also 
+  <b><a href="../tags/" target="_self">search by tags</a></b>
   in the whole site.
 </div>

@@ -26,14 +26,13 @@
     {% endfor %}
 
     <!-- navigation items -->
-    {% if prev_post %}
-      <li class="nav-left"><a href="{{ site.url }}{{ prev_post }}#title" title="Previous page: {{ prev_post_title }}"><i class="fa fa-chevron-left"></i></a></li>
-    {% endif %}
     {% assign pageurl = page.url | replace_first: '/', '' %}
     {% if pageurl contains '/' %}
-      <li class="nav-left"><a href="{% if page.categories[1] %}../..{% else %}..{% endif %}" title="Up"><i class="fa fa-chevron-up"></i></a>
+      <li class="nav-left"><a href="../../../.." title="Home"><i class="fa fa-home"></i></a>
+      <li class="nav-left"><a href="{% if page.categories[1] %}../..{% else %}..{% endif %}" title="Up one level"><i class="fa fa-arrow-up"></i></a>
     {% endif %}
     {% if pagetoc %}
+      <li class="nav-left menu"><a href="" title="Menu for current level"><i class="fa fa-bars"></i></a>
       <!-- Category-specific TOC-->
       {% assign section = "none" %}
         <ul class="toc">
@@ -50,10 +49,7 @@
     {% endif %}
       </li>
 
-    {% if next_post %}
-      <li class="nav-left"><a href="{{ site.url }}{{ next_post }}#title" title="Next page: {{ next_post_title }}"><i class="fa fa-chevron-right"></i></a></li>
-    {% endif %}
-      <li><a class="disabled">&nbsp;</a></li>
+      <li><a class="disabled spacer">&nbsp;</a></li>
 
     {% for link in site.data.navigation %}
       {% if link.url contains 'http' %}
@@ -79,6 +75,16 @@
       <!-- search items -->
       <li class="nav-right"><a href="{{ domain }}/search/" title="Search"><i class="fa fa-search"></i></a></li>
       <!--<li class="nav-right"><a href="{{ domain }}/tags/" title="Tags"><i class="fa fa-tags"></i></a></li>-->
+      {% if next_post %}
+        <li class="nav-right"><a href="{{ site.url }}{{ next_post }}#title" title="Next title: {{ next_post_title }}"><i class="fa fa-chevron-right"></i></a></li>
+      {% else %}
+        <li class="nav-right"><a href="" class="disabled"><i class="fa fa-chevron-right"></i></a></li>
+      {% endif %}
+      {% if prev_post %}
+        <li class="nav-right"><a href="{{ site.url }}{{ prev_post }}#title" title="Previous title: {{ prev_post_title }}"><i class="fa fa-chevron-left"></i></a></li>
+      {% else %}
+        <li class="nav-right"><a href="" class="disabled"><i class="fa fa-chevron-left"></i></a></li>
+      {% endif %}
     </ul>
   </nav>
 </div><!-- /.navigation-wrapper -->

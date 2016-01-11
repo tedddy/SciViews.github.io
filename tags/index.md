@@ -21,7 +21,7 @@ search_omit: true
   <ul class="post-list">
   {% for post in site.tags[this_word] %}{% if post.title != null %}
     {% assign year = post.date | date: "%Y" | plus: 0 %}
-    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}{% if year > 2000 %}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% endif %}</a></li>
+    <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}{% if year > 2000 %}<span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span>{% else %}<span class="entry-date"><time datetime="{{ post.modified }}">{{ post.modified | date: "%B %d, %Y" }}</time></span>{% endif %}</a></li>
   {% endif %}{% endfor %}
   </ul>
 {% endunless %}{% endfor %}

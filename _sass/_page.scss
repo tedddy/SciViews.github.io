@@ -196,7 +196,7 @@ span + .entry-title {
   position: absolute;
   bottom: 5px;
   right: 10px;
-  @include font-size(16, no, 16);
+  @include font-size(15, no, 15);
   color: $meta-color;
   &:hover {
     color: $menu-bg-color;
